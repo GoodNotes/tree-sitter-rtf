@@ -1,0 +1,14 @@
+{
+  "name": "tree-sitter-rtf",
+  "version": "0.0.1",
+  "repository": "https://github.com/GoodNotes/GoodNotes-5",
+  "private": true,
+  "scripts": {
+    "generate": "tree-sitter generate --no-bindings",
+    "test": "yarn generate && tree-sitter test",
+    "postinstall": "yarn generate"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.6"
+  }
+}

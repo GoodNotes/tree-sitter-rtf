@@ -1,0 +1,114 @@
+=============================
+Minimal RTF document
+=============================
+{\rtf1}
+----------------------------
+(document
+  (control_word))
+
+=============================
+Multiple control words
+=============================
+{\rtf1 \ansi}
+----------------------------
+(document
+  (control_word)
+  (control_word))
+
+=============================
+Control symbols
+=============================
+{\rtf1\*}
+----------------------------
+(document
+  (control_word)
+  (control_symbol))
+
+
+=============================
+Document with some text
+=============================
+{\rtf1 Some text }
+----------------------------
+(document
+  (control_word)
+  (text))
+
+
+=============================
+Nested group
+=============================
+{\rtf1\ansi{\control\c0 test}}
+----------------------------
+(document
+  (control_word)
+  (control_word)
+  (group
+    (control_word)
+    (control_word)
+    (text)))
+
+=============================
+Basic font table
+=============================
+{\rtf1{\fonttbl\f0\fswiss Name;\f1\froman Other;}}
+----------------------------
+(document
+  (control_word)
+  (group
+    (font_table
+      (font_config
+        (font_id)
+        (control_word))
+      (font_config
+        (font_id)
+        (control_word)))))
+
+
+==============================
+Color table support
+==============================
+{\rtf1{\colortbl;\red255\green255\blue255;\red164\green8\blue3;}}
+------
+(document
+  (control_word)
+  (group
+    (color_table
+      (color)
+      (color))))
+
+
+
+=============================
+Font and color table
+==============================
+{\rtf1
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+}
+----------------------
+(document
+  (control_word)
+  (group
+    (font_table
+      (font_config
+        (font_id)
+        (control_word)
+        (control_word))))
+  (group
+    (color_table
+      (color))))
+
+
+=============================
+Unicode support
+==============================
+{\rtf1 Mar\'eda \u55357}
+----------------------
+(document
+  (control_word)
+  (text)
+  (utf8)
+  (text)
+  (utf16))
+
