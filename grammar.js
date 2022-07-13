@@ -7,6 +7,18 @@ module.exports = grammar({
 
     comment_group: () => seq('{\\*', /[^\}]+/, '}'),
 
+    // Visible static literal
+    static_number_literal: $ => /\d+/,
+    static_dash_number_literal: $ => /-?\d+/,
+    static_word_literal: $ => /\w+/,
+    static_text_literal: $ => /[^\\\\}\\{]+/,
+
+    // Hidden static literal
+    _static_single_space: $ => /\s/,
+    _static_line_break: $ => /\\\n/,
+    _static_two_characters_literal: $ =>  /[a-zA-Z0-9]{2}/,
+    _static_uppercase_letter_literal: $ => /\W/,
+    
     _element: $ => choice(
       $.control_word,
       $.control_symbol,
@@ -28,41 +40,41 @@ module.exports = grammar({
     font_config: $ => seq(
       $.font_id,
       repeat($.control_word),
-      /\s/,
+      $._static_single_space,
       field('name', /[^;]+/), 
       ';'
     ),
 
-    font_id: () => seq('\\f', field('id', /\d+/)),
+    font_id: $ => seq('\\f', field('id', $.static_number_literal)),
 
     color_table: $ => seq('\\colortbl;', repeat($.color)),
 
-    color: () => seq(
-      '\\red', field('red', /\d+/),
-      '\\green', field('green', /\d+/),
-      '\\blue', field('blue', /\d+/),
+    color: $ => seq(
+      '\\red', field('red', $.static_number_literal),
+      '\\green', field('green', $.static_number_literal),
+      '\\blue', field('blue', $.static_number_literal),
       ';'
     ),
 
-    utf8: () => seq('\\\'', /[a-zA-Z0-9]{2}/),
+    utf8: $ => seq('\\\'', $._static_two_characters_literal),
 
-    utf16: () => seq('\\u', /\d+/),
+    utf16: $ => seq('\\u', $.static_number_literal),
 
-    control_word: () => seq(
+    control_word: $ => seq(
       '\\', 
-      field('name', /\w+/),
-      optional(field('value', /-?\d+/)),
+      field('name', $.static_word_literal),
+      optional(field('value', $.static_dash_number_literal)),
       optional(/[^\\]/)
     ),
 
-    control_symbol: () => seq(
+    control_symbol: $ => seq(
       '\\', 
-      field('name', /\W/),
+      field('name', $._static_uppercase_letter_literal),
     ),
 
-    line_jump: () => /\\\n/,
+    line_jump: $ => $._static_line_break,
 
-    text: () => field('text', /[^\\\\}\\{]+/),
+    text: $ => field('text', $.static_text_literal),
   },
 });
 
