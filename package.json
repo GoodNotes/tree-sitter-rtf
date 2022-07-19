@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "generate": "tree-sitter generate --no-bindings",
-    "test": "yarn generate && tree-sitter test",
+    "test": "tree-sitter test",
+    "test:debug": "tree-sitter test --debug",
     "postinstall": "yarn generate"
   },
   "devDependencies": {
