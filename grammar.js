@@ -1,54 +1,51 @@
+
+
+const ESCAPE_SET = 'abtnvfrE!"#\\$&\'\\(\\)\\*,;<>\\?\\[\\\\\\]^`{\\|}~';
+
 module.exports = grammar({
   name: "rtf",
   rules: {
     document: $ => alias($.group, 'document'),
 
-    group: $ => seq('{', $._document_format, '}'),
+    group: $ => repeat1(
+      choice(
+        $._document_metadata,
+        $.text_unit,
+        $._end_of_document
+    )),
 
-    // Visible static literal
-    static_number_literal: $ => /\d+/,
-    
-    // Hidden static literal
-    _static_PCDATA: $ => /[^\\\\}\\{;]+/,
-
-    _document_format: $ => seq(
-      $._document_header,
-      $._document_area,
-    ),
-
-    _document_header: $ => seq(
-      '\\rtf1',
-      optional('\\fbidis'),
+    _document_metadata: $ => choice(
       $._header_character_set,
-      optional($._from),
-
-      // Some specific headers for MACOS
-      optional(/\\cocoartf\d+/),
-      optional(/\\cocoatextscaling\d+/),
-      optional(/\\cocoaplatform\d+/),
-
-
-      // Start deffont
-      optional(/\\deff\d+/),
-      optional(/\\adeff\d+/),
-      optional(seq(/\\stshfdbch\d+/, /\\stshfloch\d+/, /\\stshfhich\d+/, /\\stshfbi\d+/)),
-      // End deffont
-
-      // Start deflang
-      optional(/\\deflang\d+/),
-      optional(/\\deflangfe\d+/),
-      optional(/\\adeflang\d+/),
-      // End deflang
-
-      optional($.fonttbl),
-      optional($._filetbl),
-      optional($.colortbl),
-      optional($._expcolortbl),
+      $._cocoa_custom_header,
+      $.colortbl,
+      $._expcolortbl,
+      $._paper_tbl,
+      $._par_tbl
     ),
+
+    _paper_tbl: $ => seq(
+      repeat1($._paper_config),
+      /\n/
+    ),
+
+    _par_tbl: $ => seq(
+      repeat1($._par_config),
+      /\n/
+    ),
+
+    _end_of_document: $ => '}',
 
     _header_character_set: $ => seq(
+      '{\\rtf1',
       choice('\\ansi', '\\mac', '\\pc', '\\pca', '\\ansicpg', '\\cpg', '\\cpgid'),
       /\\ansicpg\d+/,
+      /\\cocoartf\d+/
+    ),
+
+    _cocoa_custom_header: $ => seq(
+      /\\cocoatextscaling\d+/,
+      /\\cocoaplatform\d+/,
+      $.fonttbl
     ),
 
     _from: $ => choice('\\fromtext', '\\fromhtml'),
@@ -155,7 +152,7 @@ module.exports = grammar({
       '{',
       '\\colortbl',
       repeat1($._colordef),
-      '}',
+      '}\n',
     ),
 
     _colordef: $ => seq(
@@ -176,8 +173,7 @@ module.exports = grammar({
       '\\caccentsix', '\\chyperlink', '\\cfollowedhyperlink', '\\cbackgroundone', 
       '\\ctextone', '\\cbackgroundtwo', '\\ctexttwo'),
 
-
-    // EXPANDED COLOR TABLE
+    // Expanded color table
     _expcolortbl: $ => seq(
       '{\\\*',
       '\\expandedcolortbl',
@@ -187,7 +183,7 @@ module.exports = grammar({
       optional(/\\c\d+/),
       optional(/\\c\d+/),
       optional(';'),
-      '}',
+      '}\n',
     ),
 
     _data: $ => choice(
@@ -279,9 +275,10 @@ module.exports = grammar({
       // optional($._info), // => NOT NEEDED FOR NOW
       // optional($._xmlnstbl), // => NOT NEEDED FOR NOW
       // repeat($.docfmt), // => NOT NEEDED FOR NOW
+      /\n/,
       repeat($._paper_config),
       repeat($._par_config),
-      repeat1($.text_unit)
+      repeat($.text_unit)
     ),
 
     _paper_config: $ => choice(
@@ -302,26 +299,32 @@ module.exports = grammar({
       /\\sl\-\d+/,
     ),
 
-    text_unit: $ => seq(
-      repeat1($.text_unit_config),
-      $.text_unit_content,
-    ),
+    text_unit: $ => seq(repeat($.text_unit_config), $.text_unit_content),
 
-    text_unit_content: $ => $._static_PCDATA,
-
-    text_unit_config: $ => seq(
-      repeat1($._text_unit_option),
-      /\s/,
-    ),
-
-    _text_unit_option: $ => choice(
+    text_unit_config: $ => seq(choice(
       /\\f\d+/,
       /\\fs\d+/,
       /\\cf\d+/,
       '\\b',
       /\\dn\d+/,
-    )
+      ), optional(/\s/)),
 
+    text_unit_content: $ => prec.right(repeat1(
+      choice(
+        /\w/,
+        new RegExp ('\\\\['+ESCAPE_SET+']'),
+        // Chars that sholud be escaped but are not in RTF
+        '!',
+        '.',
+        '\\'
+      )
+    )),
+
+    // Visible static literal
+    static_number_literal: $ => /\d+/,
+    
+    // Hidden static literal
+    _static_PCDATA: $ => /[^\\\\}\\{;]+/,
 
   },
 });
