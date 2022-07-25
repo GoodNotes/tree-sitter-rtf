@@ -68,7 +68,7 @@ module.exports = grammar({
       optional($._nontaggedname),
       optional($._fontemb),
       optional(/\\cpg\d+/),
-      $.fontname,
+      $._font_definition,
       optional($._fontaltname),
       ';',
     ),
@@ -97,7 +97,10 @@ module.exports = grammar({
       ';}',
     ),
 
-    fontname: $ => seq($._static_PCDATA),
+    _font_definition: $ => seq(/\s/, $.fontname, optional('-'), optional($.fonttypeface)),
+
+    fontname: $ => /[\w\s]+/,
+    fonttypeface: $ => $._static_PCDATA,
 
     _fontaltname: $ => seq(
       '{\\\*',
