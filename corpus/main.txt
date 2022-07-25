@@ -212,6 +212,7 @@ Text with '!' as special character
       (static_number_literal)
       (static_number_literal)
       (static_number_literal)))
+  (par_tbl)
   (text_unit
     (text_unit_config)
     (text_unit_config)
@@ -239,6 +240,7 @@ Text with '.' as special character
       (static_number_literal)
       (static_number_literal)
       (static_number_literal)))
+  (par_tbl)
   (text_unit
     (text_unit_config)
     (text_unit_config)

@@ -20,15 +20,15 @@ module.exports = grammar({
       $.colortbl,
       $._expcolortbl,
       $._paper_tbl,
-      $._par_tbl
+      $.par_tbl
     ),
-
+    
     _paper_tbl: $ => seq(
       repeat1($._paper_config),
       /\n/
     ),
 
-    _par_tbl: $ => seq(
+    par_tbl: $ => seq(
       repeat1($._par_config),
       /\n/
     ),
@@ -300,6 +300,14 @@ module.exports = grammar({
       '\\pardirnatural',
       /\\partightenfactor\d+/,
       /\\sl\-\d+/,
+      $.alignment_config
+    ),
+
+    alignment_config: $ => choice(
+      /\\ql/,
+      /\\qc/,
+      /\\qr/,
+      /\\qj/,
     ),
 
     text_unit: $ => seq(repeat($.text_unit_config), $.text_unit_content),
