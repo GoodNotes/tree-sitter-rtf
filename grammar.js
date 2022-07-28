@@ -299,13 +299,13 @@ module.exports = grammar({
       /\\tx\d+/,
       '\\pardirnatural',
       /\\partightenfactor\d+/,
-      seq('\\sl-', field('lineSpacing', $.lineSpacing)),
+      seq('\\sl', field('lineSpacing', $.lineSpacing)),
       seq('\\slleading', field('lineGap', $.lineGap)),
       $.alignment_config
     ),
 
-    lineSpacing: $ => $._static_number_literal,
-    lineGap: $ => $._static_number_literal,
+    lineSpacing: $ => $._static_int_number_literal,
+    lineGap: $ => $._static_int_number_literal,
 
     alignment_config: $ => choice(
       /\\ql/,
@@ -321,8 +321,8 @@ module.exports = grammar({
       /\\fs\d+/,
       /\\cf\d+/,
       '\\b',
-      /\\dn\d+/,
-      /\\up\d+/,
+      seq('\\dn', field('positionDown', $.positionDown)),
+      seq('\\up', field('positionUp', $.positionUp)),
       ), optional(/\s/)),
 
     text_unit_content: $ => prec.right(repeat1(
@@ -336,11 +336,14 @@ module.exports = grammar({
       )
     )),
 
+    positionDown: $ => $._static_int_number_literal,
+    positionUp: $ => $._static_int_number_literal,
+
     // Visible static literal
     static_number_literal: $ => /\d+/,
     
     // Hidden static literal
-    _static_number_literal: $ => /\d+/,
+    _static_int_number_literal: $ => /-?\d+/,
     _static_PCDATA: $ => /[^\\\\}\\{;]+/,
 
   },
