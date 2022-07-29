@@ -18,24 +18,25 @@ Fin}
 ----------------------------
 (document
   (fonttbl
-        (fontname))
-      (colortbl
-        (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal))
-        (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal)))
-      (par_tbl
-        (lineSpacing)
-        (lineGap))
-      (text_unit
-        (fontIndex)
-        (fontSize)
-        (colorFontIndex)
-        (text_unit_content)))
+    (font_definition
+      (fontname)))
+  (colortbl
+    (colorvalue
+      (static_number_literal)
+      (static_number_literal)
+      (static_number_literal))
+    (colorvalue
+      (static_number_literal)
+      (static_number_literal)
+      (static_number_literal)))
+  (par_tbl
+    (lineSpacing)
+    (lineGap))
+  (text_unit
+    (fontIndex)
+    (fontSize)
+    (colorFontIndex)
+    (text_unit_content)))
 
 =============================
 Multiline with Line spacing 36, moving line up 9
@@ -57,25 +58,26 @@ Fin}
 ----------------------------
 (document
   (fonttbl
-        (fontname))
-      (colortbl
-        (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal))
-        (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal)))
-      (par_tbl
-        (lineSpacing)
-        (lineGap))
-      (text_unit
-        (fontIndex)
-        (fontSize)
-        (colorFontIndex)
-        (positionUp)
-        (text_unit_content)))
+    (font_definition
+      (fontname)))
+  (colortbl
+    (colorvalue
+      (static_number_literal)
+      (static_number_literal)
+      (static_number_literal))
+    (colorvalue
+      (static_number_literal)
+      (static_number_literal)
+      (static_number_literal)))
+  (par_tbl
+    (lineSpacing)
+    (lineGap))
+  (text_unit
+    (fontIndex)
+    (fontSize)
+    (colorFontIndex)
+    (positionUp)
+    (text_unit_content)))
 
 =============================
 Multiline with Line spacing 36, moving line down 7
@@ -97,22 +99,23 @@ Fin}
 ----------------------------
 (document
   (fonttbl
-        (fontname))
-      (colortbl
-        (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal))
-        (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal)))
-      (par_tbl
-        (lineSpacing)
-        (lineGap))
-      (text_unit
-        (fontIndex)
-        (fontSize)
-        (colorFontIndex)
-        (positionDown)
-        (text_unit_content)))
+    (font_definition
+      (fontname)))
+  (colortbl
+    (colorvalue
+      (static_number_literal)
+      (static_number_literal)
+      (static_number_literal))
+    (colorvalue
+      (static_number_literal)
+      (static_number_literal)
+      (static_number_literal)))
+  (par_tbl
+    (lineSpacing)
+    (lineGap))
+  (text_unit
+    (fontIndex)
+    (fontSize)
+    (colorFontIndex)
+    (positionDown)
+    (text_unit_content)))

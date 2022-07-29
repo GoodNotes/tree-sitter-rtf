@@ -12,7 +12,8 @@ Right aligned text unit
 ----------------------------
 (document
       (fonttbl
-        (fontname))
+        (font_definition
+          (fontname)))
       (colortbl
         (colorvalue
           (static_number_literal)
@@ -40,7 +41,8 @@ Center aligned text unit
 ----------------------------
 (document
     (fonttbl
-      (fontname))
+      (font_definition
+        (fontname)))
     (colortbl
       (colorvalue
         (static_number_literal)
@@ -68,7 +70,8 @@ Justified aligned text unit
 ----------------------------
 (document
   (fonttbl
-    (fontname))
+    (font_definition
+      (fontname)))
   (colortbl
     (colorvalue
       (static_number_literal)
@@ -103,7 +106,8 @@ Justified aligned text unit
 ----------------------------
 (document
     (fonttbl
-      (fontname))
+      (font_definition
+        (fontname)))
     (colortbl
       (colorvalue
         (static_number_literal)

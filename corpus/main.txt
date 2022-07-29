@@ -8,8 +8,9 @@ Empty RTF document
 ----------------------------
 (document
   (fonttbl
-    (fontname)
-    (fonttypeface))
+    (font_definition
+      (fontname)
+      (fonttypeface)))
   (colortbl
     (colorvalue
       (static_number_literal)
@@ -31,8 +32,9 @@ Minimal RTF document
 ----------------------------
 (document
   (fonttbl
-    (fontname)
-    (fonttypeface))
+    (font_definition
+      (fontname)
+      (fonttypeface)))
   (colortbl
     (colorvalue
       (static_number_literal)
@@ -59,8 +61,9 @@ Pedro}
 ----------------------------
 (document
   (fonttbl
-    (fontname)
-    (fonttypeface))
+    (font_definition
+      (fontname)
+      (fonttypeface)))
   (colortbl
     (colorvalue
       (static_number_literal)
@@ -86,7 +89,8 @@ Pedro}
 ----------------------------
 (document
   (fonttbl
-    (fontname))
+    (font_definition
+      (fontname)))
   (colortbl
     (colorvalue
       (static_number_literal)
@@ -118,8 +122,10 @@ Pedro}
 ----------------------------
 (document
   (fonttbl
-    (fontname)
-    (fontname))
+    (font_definition
+      (fontname))
+    (font_definition
+      (fontname)))
   (colortbl
     (colorvalue
       (static_number_literal)
@@ -145,8 +151,9 @@ Pedro}
 ----------------------------
 (document
   (fonttbl
-    (fontname)
-    (fonttypeface))
+    (font_definition
+      (fontname)
+      (fonttypeface)))
   (colortbl
     (colorvalue
       (static_number_literal)
@@ -174,8 +181,9 @@ Pedro}
 ----------------------------
 (document
   (fonttbl
-    (fontname)
-    (fonttypeface))
+    (font_definition
+      (fontname)
+      (fonttypeface)))
   (colortbl
     (colorvalue
       (static_number_literal)
@@ -206,7 +214,8 @@ Text with '!' as special character
 ----------------------------
 (document
   (fonttbl
-    (fontname))
+    (font_definition
+      (fontname)))
   (colortbl
     (colorvalue
       (static_number_literal)
@@ -234,7 +243,8 @@ Text with '.' as special character
 ----------------------------
 (document
   (fonttbl
-    (fontname))
+    (font_definition
+      (fontname)))
   (colortbl
     (colorvalue
       (static_number_literal)

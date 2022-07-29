@@ -12,7 +12,8 @@
 ----------------------------
 (document
     (fonttbl
-    (fontname))
+      (font_definition
+          (fontname)))
     (colortbl
     (colorvalue
         (static_number_literal)
@@ -48,7 +49,8 @@
 ----------------------------
 (document
     (fonttbl
-    (fontname))
+      (font_definition
+        (fontname)))
     (colortbl
     (colorvalue
         (static_number_literal)
@@ -87,7 +89,8 @@
 ----------------------------
 (document
       (fonttbl
-        (fontname))
+        (font_definition
+          (fontname)))
       (colortbl
         (colorvalue
           (static_number_literal)

@@ -68,7 +68,7 @@ module.exports = grammar({
       optional($._nontaggedname),
       optional($._fontemb),
       optional(/\\cpg\d+/),
-      $._font_definition,
+      $.font_definition,
       optional($._fontaltname),
       ';',
     ),
@@ -97,7 +97,14 @@ module.exports = grammar({
       ';}',
     ),
 
-    _font_definition: $ => seq(/\s/, $.fontname, optional('-'), optional($.fonttypeface)),
+    font_definition: $ => seq(
+      /\s/, 
+      field('fontname', $.fontname),
+      optional(seq(
+        '-', 
+        field('fonttypeface', $.fonttypeface),
+      ))
+    ),
 
     fontname: $ => /[\w\s]+/,
     fonttypeface: $ => $._static_PCDATA,
@@ -321,6 +328,7 @@ module.exports = grammar({
       seq('\\fs', field('fontSize', $.fontSize)),
       seq('\\cf', field('colorFontIndex', $.colorFontIndex)),
       $.boldEnabled,
+      $.boldDisabled,
       seq('\\dn', field('positionDown', $.positionDown)),
       seq('\\up', field('positionUp', $.positionUp)),
       ), optional(/\s/)),
@@ -332,6 +340,7 @@ module.exports = grammar({
         // Chars that sholud be escaped but are not in RTF
         '!',
         '.',
+        ":",
         '\\'
       )
     )),
@@ -340,6 +349,7 @@ module.exports = grammar({
     fontSize: $ => $._static_int_number_literal,
     colorFontIndex: $ => $._static_int_number_literal,
     boldEnabled: () => '\\b',
+    boldDisabled: () => /\\b\d+/,
 
     positionDown: $ => $._static_int_number_literal,
     positionUp: $ => $._static_int_number_literal,
