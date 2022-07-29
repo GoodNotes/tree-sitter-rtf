@@ -28,9 +28,9 @@
         (static_number_literal)))
     (par_tbl)
     (text_unit
-        (text_unit_config)
-        (text_unit_config)
-        (text_unit_config)
+        (fontIndex)
+        (fontSize)
+        (colorFontIndex)
         (text_unit_content)))
 
 
@@ -64,12 +64,12 @@
         (static_number_literal)))
     (par_tbl)
     (text_unit
-        (text_unit_config)
-        (text_unit_config)
-        (text_unit_config)
+        (fontIndex)
+        (fontSize)
+        (colorFontIndex)
         (text_unit_content))
     (text_unit
-        (text_unit_config)
+        (colorFontIndex)
         (text_unit_content)))
 
 
@@ -103,11 +103,11 @@
           (static_number_literal)))
       (par_tbl)
       (text_unit
-        (text_unit_config)
-        (text_unit_config)
-        (text_unit_config)
+        (fontIndex)
+        (fontSize)
+        (colorFontIndex)
         (text_unit_content))
       (text_unit
-        (text_unit_config)
+        (colorFontIndex)
         (text_unit_content)))
 

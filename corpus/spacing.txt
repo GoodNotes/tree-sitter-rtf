@@ -32,9 +32,9 @@ Fin}
         (lineSpacing)
         (lineGap))
       (text_unit
-        (text_unit_config)
-        (text_unit_config)
-        (text_unit_config)
+        (fontIndex)
+        (fontSize)
+        (colorFontIndex)
         (text_unit_content)))
 
 =============================
@@ -71,11 +71,10 @@ Fin}
         (lineSpacing)
         (lineGap))
       (text_unit
-        (text_unit_config)
-        (text_unit_config)
-        (text_unit_config)
-        (text_unit_config
-          (positionUp))
+        (fontIndex)
+        (fontSize)
+        (colorFontIndex)
+        (positionUp)
         (text_unit_content)))
 
 =============================
@@ -112,9 +111,8 @@ Fin}
         (lineSpacing)
         (lineGap))
       (text_unit
-        (text_unit_config)
-        (text_unit_config)
-        (text_unit_config)
-        (text_unit_config
-          (positionDown))
+        (fontIndex)
+        (fontSize)
+        (colorFontIndex)
+        (positionDown)
         (text_unit_content)))

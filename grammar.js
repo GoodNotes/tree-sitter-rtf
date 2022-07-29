@@ -314,13 +314,13 @@ module.exports = grammar({
       /\\qj/,
     ),
 
-    text_unit: $ => seq(repeat($.text_unit_config), $.text_unit_content),
+    text_unit: $ => seq(repeat($._text_unit_config), $.text_unit_content),
 
-    text_unit_config: $ => seq(choice(
-      /\\f\d+/,
-      /\\fs\d+/,
-      /\\cf\d+/,
-      '\\b',
+    _text_unit_config: $ => seq(choice(
+      seq('\\f', field('fontIndex', $.fontIndex)),
+      seq('\\fs', field('fontSize', $.fontSize)),
+      seq('\\cf', field('colorFontIndex', $.colorFontIndex)),
+      $.boldEnabled,
       seq('\\dn', field('positionDown', $.positionDown)),
       seq('\\up', field('positionUp', $.positionUp)),
       ), optional(/\s/)),
@@ -335,6 +335,11 @@ module.exports = grammar({
         '\\'
       )
     )),
+
+    fontIndex: $ => $._static_int_number_literal,
+    fontSize: $ => $._static_int_number_literal,
+    colorFontIndex: $ => $._static_int_number_literal,
+    boldEnabled: () => '\\b',
 
     positionDown: $ => $._static_int_number_literal,
     positionUp: $ => $._static_int_number_literal,

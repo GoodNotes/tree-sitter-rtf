@@ -21,9 +21,9 @@ Right aligned text unit
       (par_tbl
         (alignment_config))
       (text_unit
-        (text_unit_config)
-        (text_unit_config)
-        (text_unit_config)
+        (fontIndex)
+        (fontSize)
+        (colorFontIndex)
         (text_unit_content)))
 
 =============================
@@ -49,9 +49,9 @@ Center aligned text unit
     (par_tbl
       (alignment_config))
     (text_unit
-      (text_unit_config)
-      (text_unit_config)
-      (text_unit_config)
+      (fontIndex)
+      (fontSize)
+      (colorFontIndex)
       (text_unit_content)))
 
 =============================
@@ -77,9 +77,9 @@ Justified aligned text unit
   (par_tbl
     (alignment_config))
   (text_unit
-    (text_unit_config)
-    (text_unit_config)
-    (text_unit_config)
+    (fontIndex)
+    (fontSize)
+    (colorFontIndex)
     (text_unit_content)))
 
 =============================
@@ -112,21 +112,21 @@ Justified aligned text unit
     (par_tbl
       (alignment_config))
     (text_unit
-      (text_unit_config)
-      (text_unit_config)
-      (text_unit_config)
+      (fontIndex)
+      (fontSize)
+      (colorFontIndex)
       (text_unit_content))
     (par_tbl
       (alignment_config))
     (text_unit
-      (text_unit_config)
+      (colorFontIndex)
       (text_unit_content))
     (par_tbl)
     (text_unit
-      (text_unit_config)
+      (colorFontIndex)
       (text_unit_content))
     (par_tbl
       (alignment_config))
     (text_unit
-      (text_unit_config)
+      (colorFontIndex)
       (text_unit_content)))

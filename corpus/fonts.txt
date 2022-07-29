@@ -18,15 +18,15 @@
           (static_number_literal)
           (static_number_literal)))
       (text_unit
-        (text_unit_config)
-        (text_unit_config)
-        (text_unit_config)
+        (fontIndex)
+        (fontSize)
+        (colorFontIndex)
         (text_unit_content))
       (text_unit
-        (text_unit_config)
+        (fontSize)
         (text_unit_content))
       (text_unit
-        (text_unit_config)
+        (fontSize)
         (text_unit_content)))
   
 
@@ -54,15 +54,15 @@
           (static_number_literal)))
       (par_tbl)
       (text_unit
-        (text_unit_config)
-        (text_unit_config)
-        (text_unit_config)
+        (fontIndex)
+        (fontSize)
+        (colorFontIndex)
         (text_unit_content))
       (text_unit
-        (text_unit_config)
+        (fontSize)
         (text_unit_content))
       (text_unit
-        (text_unit_config)
+        (fontSize)
         (text_unit_content)))
   
 
@@ -92,13 +92,13 @@ Pepe}
           (static_number_literal)))
       (par_tbl)
       (text_unit
-        (text_unit_config)
-        (text_unit_config)
-        (text_unit_config)
+        (fontIndex)
+        (fontSize)
+        (colorFontIndex)
         (text_unit_content))
       (text_unit
-        (text_unit_config)
+        (fontSize)
         (text_unit_content))
       (text_unit
-        (text_unit_config)
+        (fontSize)
         (text_unit_content)))

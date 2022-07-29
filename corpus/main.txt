@@ -43,9 +43,9 @@ Minimal RTF document
       (static_number_literal)
       (static_number_literal)))
   (text_unit
-    (text_unit_config)
-    (text_unit_config)
-    (text_unit_config)
+    (fontIndex)
+    (fontSize)
+    (colorFontIndex)
     (text_unit_content)))
 
 =============================
@@ -97,12 +97,12 @@ Pedro}
       (static_number_literal)
       (static_number_literal)))
   (text_unit
-    (text_unit_config)
-    (text_unit_config)
-    (text_unit_config)
+    (fontIndex)
+    (fontSize)
+    (colorFontIndex)
     (text_unit_content))
   (text_unit
-    (text_unit_config)
+    (fontSize)
     (text_unit_content)))
 
 =============================
@@ -126,12 +126,12 @@ Pedro}
       (static_number_literal)
       (static_number_literal)))
   (text_unit
-    (text_unit_config)
-    (text_unit_config)
-    (text_unit_config)
+    (fontIndex)
+    (fontSize)
+    (colorFontIndex)
     (text_unit_content))
   (text_unit
-    (text_unit_config)
+    (fontIndex)
     (text_unit_content)))
 
 =============================
@@ -157,9 +157,9 @@ Pedro}
       (static_number_literal)
       (static_number_literal)))
   (text_unit
-    (text_unit_config)
-    (text_unit_config)
-    (text_unit_config)
+    (fontIndex)
+    (fontSize)
+    (colorFontIndex)
     (text_unit_content)))
 
 
@@ -186,9 +186,9 @@ Pedro}
       (static_number_literal)
       (static_number_literal)))
   (text_unit
-    (text_unit_config)
-    (text_unit_config)
-    (text_unit_config)
+    (fontIndex)
+    (fontSize)
+    (colorFontIndex)
     (text_unit_content)))
 
 
@@ -214,9 +214,9 @@ Text with '!' as special character
       (static_number_literal)))
   (par_tbl)
   (text_unit
-    (text_unit_config)
-    (text_unit_config)
-    (text_unit_config)
+    (fontIndex)
+    (fontSize)
+    (colorFontIndex)
     (text_unit_content)))
 
 
@@ -242,7 +242,7 @@ Text with '.' as special character
       (static_number_literal)))
   (par_tbl)
   (text_unit
-    (text_unit_config)
-    (text_unit_config)
-    (text_unit_config)
+    (fontIndex)
+    (fontSize)
+    (colorFontIndex)
     (text_unit_content)))
