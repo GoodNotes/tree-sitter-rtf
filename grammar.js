@@ -329,6 +329,8 @@ module.exports = grammar({
       seq('\\cf', field('colorFontIndex', $.colorFontIndex)),
       $.boldEnabled,
       $.boldDisabled,
+      $.italicEnabled,
+      $.italicDisabled,
       seq('\\dn', field('positionDown', $.positionDown)),
       seq('\\up', field('positionUp', $.positionUp)),
       ), optional(/\s/)),
@@ -350,6 +352,8 @@ module.exports = grammar({
     colorFontIndex: $ => $._static_int_number_literal,
     boldEnabled: () => '\\b',
     boldDisabled: () => /\\b\d+/,
+    italicEnabled: () => '\\i',
+    italicDisabled: () => /\\i\d+/,
 
     positionDown: $ => $._static_int_number_literal,
     positionUp: $ => $._static_int_number_literal,
