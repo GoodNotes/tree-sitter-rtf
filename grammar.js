@@ -39,12 +39,12 @@ module.exports = grammar({
       '{\\rtf1',
       choice('\\ansi', '\\mac', '\\pc', '\\pca', '\\ansicpg', '\\cpg', '\\cpgid'),
       /\\ansicpg\d+/,
-      /\\cocoartf\d+/
+      optional(/\\cocoartf\d+/)
     ),
 
     _cocoa_custom_header: $ => seq(
-      /\\cocoatextscaling\d+/,
-      /\\cocoaplatform\d+/,
+      optional(/\\cocoatextscaling\d+/),
+      optional(/\\cocoaplatform\d+/),
       $.fonttbl
     ),
 
@@ -188,11 +188,13 @@ module.exports = grammar({
       '{\\\*',
       '\\expandedcolortbl',
       ';;',
-      optional('\\cssrgb'),
-      optional(/\\c\d+/),
-      optional(/\\c\d+/),
-      optional(/\\c\d+/),
-      optional(';'),
+      repeat(seq(
+        choice('\\cssrgb', '\\cspthree'),
+        /\\c\d+/,
+        /\\c\d+/,
+        /\\c\d+/,
+        ';',
+      )),
       '}\n',
     ),
 
