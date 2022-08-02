@@ -8,18 +8,18 @@ Empty RTF document
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname)
       (fonttypeface)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral))
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal))))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral))))
 
 =============================
 Minimal RTF document
@@ -32,23 +32,23 @@ Minimal RTF document
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname)
       (fonttypeface)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral))
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (text_unit
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (textUnit
     (fontIndex)
     (fontSize)
     (colorFontIndex)
-    (text_unit_content)))
+    (textUnitContent)))
 
 =============================
 Text with no fonts config for text
@@ -61,20 +61,20 @@ Pedro}
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname)
       (fonttypeface)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral))
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (text_unit
-    (text_unit_content)))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (textUnit
+    (textUnitContent)))
 
 
 =============================
@@ -89,25 +89,25 @@ Pedro}
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral))
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (text_unit
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (textUnit
     (fontIndex)
     (fontSize)
     (colorFontIndex)
-    (text_unit_content))
-  (text_unit
+    (textUnitContent))
+  (textUnit
     (fontSize)
-    (text_unit_content)))
+    (textUnitContent)))
 
 =============================
 2 words with different fonts
@@ -122,23 +122,23 @@ Pedro}
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname))
-    (font_definition
+    (fontDefinition
       (fontname)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (text_unit
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (textUnit
     (fontIndex)
     (fontSize)
     (colorFontIndex)
-    (text_unit_content))
-  (text_unit
+    (textUnitContent))
+  (textUnit
     (fontIndex)
-    (text_unit_content)))
+    (textUnitContent)))
 
 =============================
 2 words separated by 1 space
@@ -151,23 +151,23 @@ Pedro}
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname)
       (fonttypeface)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral))
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (text_unit
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (textUnit
     (fontIndex)
     (fontSize)
     (colorFontIndex)
-    (text_unit_content)))
+    (textUnitContent)))
 
 
 =============================
@@ -181,23 +181,23 @@ Pedro}
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname)
       (fonttypeface)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral))
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (text_unit
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (textUnit
     (fontIndex)
     (fontSize)
     (colorFontIndex)
-    (text_unit_content)))
+    (textUnitContent)))
 
 
 =============================
@@ -214,19 +214,19 @@ Text with '!' as special character
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (par_tbl)
-  (text_unit
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (parTbl)
+  (textUnit
     (fontIndex)
     (fontSize)
     (colorFontIndex)
-    (text_unit_content)))
+    (textUnitContent)))
 
 
 =============================
@@ -243,16 +243,16 @@ Text with '.' as special character
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (par_tbl)
-  (text_unit
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (parTbl)
+  (textUnit
     (fontIndex)
     (fontSize)
     (colorFontIndex)
-    (text_unit_content)))
+    (textUnitContent)))

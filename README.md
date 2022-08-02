@@ -63,17 +63,17 @@ Minimal RTF document
     (fontname))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral))
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (text_unit
-    (text_unit_config)
-    (text_unit_config)
-    (text_unit_content)))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (textUnit
+    (fontIndex)
+    (fontSize)
+    (textUnitContent)))
 ```
 
 ## Specs

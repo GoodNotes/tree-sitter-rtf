@@ -10,7 +10,7 @@ module.exports = grammar({
     group: $ => repeat1(
       choice(
         $._document_metadata,
-        $.text_unit,
+        $.textUnit,
         $._end_of_document
     )),
 
@@ -20,7 +20,7 @@ module.exports = grammar({
       $.colortbl,
       $._expcolortbl,
       $._paper_tbl,
-      $.par_tbl
+      $.parTbl
     ),
     
     _paper_tbl: $ => seq(
@@ -28,7 +28,7 @@ module.exports = grammar({
       /\n/
     ),
 
-    par_tbl: $ => seq(
+    parTbl: $ => seq(
       repeat1($._par_config),
       /\n/
     ),
@@ -68,7 +68,7 @@ module.exports = grammar({
       optional($._nontaggedname),
       optional($._fontemb),
       optional(/\\cpg\d+/),
-      $.font_definition,
+      $.fontDefinition,
       optional($._fontaltname),
       ';',
     ),
@@ -97,7 +97,7 @@ module.exports = grammar({
       ';}',
     ),
 
-    font_definition: $ => seq(
+    fontDefinition: $ => seq(
       /\s/, 
       field('fontname', $.fontname),
       optional(seq(
@@ -172,9 +172,9 @@ module.exports = grammar({
     ),
 
     colorvalue: $ => seq(
-      '\\red', field('red', $.static_number_literal),
-      '\\green', field('green', $.static_number_literal),
-      '\\blue', field('blue', $.static_number_literal),
+      '\\red', field('red', $.staticNumberLiteral),
+      '\\green', field('green', $.staticNumberLiteral),
+      '\\blue', field('blue', $.staticNumberLiteral),
     ),
 
     _themecolor: $ => choice(
@@ -288,7 +288,7 @@ module.exports = grammar({
       /\n/,
       repeat($._paper_config),
       repeat($._par_config),
-      repeat($.text_unit)
+      repeat($.textUnit)
     ),
 
     _paper_config: $ => choice(
@@ -308,22 +308,22 @@ module.exports = grammar({
       /\\partightenfactor\d+/,
       seq('\\sl', field('lineSpacing', $.lineSpacing)),
       seq('\\slleading', field('lineGap', $.lineGap)),
-      $.alignment_config
+      $.alignmentConfig
     ),
 
     lineSpacing: $ => $._static_int_number_literal,
     lineGap: $ => $._static_int_number_literal,
 
-    alignment_config: $ => choice(
+    alignmentConfig: $ => choice(
       /\\ql/,
       /\\qc/,
       /\\qr/,
       /\\qj/,
     ),
 
-    text_unit: $ => seq(repeat($._text_unit_config), $.text_unit_content),
+    textUnit: $ => seq(repeat($._textUnit_config), $.textUnitContent),
 
-    _text_unit_config: $ => seq(choice(
+    _textUnit_config: $ => seq(choice(
       seq('\\f', field('fontIndex', $.fontIndex)),
       seq('\\fs', field('fontSize', $.fontSize)),
       seq('\\cf', field('colorFontIndex', $.colorFontIndex)),
@@ -339,7 +339,7 @@ module.exports = grammar({
       seq('\\up', field('positionUp', $.positionUp)),
       ), optional(/\s/)),
 
-    text_unit_content: $ => prec.right(repeat1(
+    textUnitContent: $ => prec.right(repeat1(
       choice(
         /\w/,
         new RegExp ('\\\\['+ESCAPE_SET+']'),
@@ -367,7 +367,7 @@ module.exports = grammar({
     positionUp: $ => $._static_int_number_literal,
 
     // Visible static literal
-    static_number_literal: $ => /\d+/,
+    staticNumberLiteral: $ => /\d+/,
     
     // Hidden static literal
     _static_int_number_literal: $ => /-?\d+/,

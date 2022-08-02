@@ -12,20 +12,20 @@ Right aligned text unit
 ----------------------------
 (document
       (fonttbl
-        (font_definition
+        (fontDefinition
           (fontname)))
       (colortbl
         (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal)))
-      (par_tbl
-        (alignment_config))
-      (text_unit
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral)))
+      (parTbl
+        (alignmentConfig))
+      (textUnit
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (text_unit_content)))
+        (textUnitContent)))
 
 =============================
 Center aligned text unit
@@ -41,20 +41,20 @@ Center aligned text unit
 ----------------------------
 (document
     (fonttbl
-      (font_definition
+      (fontDefinition
         (fontname)))
     (colortbl
       (colorvalue
-        (static_number_literal)
-        (static_number_literal)
-        (static_number_literal)))
-    (par_tbl
-      (alignment_config))
-    (text_unit
+        (staticNumberLiteral)
+        (staticNumberLiteral)
+        (staticNumberLiteral)))
+    (parTbl
+      (alignmentConfig))
+    (textUnit
       (fontIndex)
       (fontSize)
       (colorFontIndex)
-      (text_unit_content)))
+      (textUnitContent)))
 
 =============================
 Justified aligned text unit
@@ -70,20 +70,20 @@ Justified aligned text unit
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (par_tbl
-    (alignment_config))
-  (text_unit
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (parTbl
+    (alignmentConfig))
+  (textUnit
     (fontIndex)
     (fontSize)
     (colorFontIndex)
-    (text_unit_content)))
+    (textUnitContent)))
 
 =============================
 4 text units with different types of alignments combined where left aligned is not specified
@@ -106,31 +106,31 @@ Justified aligned text unit
 ----------------------------
 (document
     (fonttbl
-      (font_definition
+      (fontDefinition
         (fontname)))
     (colortbl
       (colorvalue
-        (static_number_literal)
-        (static_number_literal)
-        (static_number_literal)))
-    (par_tbl
-      (alignment_config))
-    (text_unit
+        (staticNumberLiteral)
+        (staticNumberLiteral)
+        (staticNumberLiteral)))
+    (parTbl
+      (alignmentConfig))
+    (textUnit
       (fontIndex)
       (fontSize)
       (colorFontIndex)
-      (text_unit_content))
-    (par_tbl
-      (alignment_config))
-    (text_unit
+      (textUnitContent))
+    (parTbl
+      (alignmentConfig))
+    (textUnit
       (colorFontIndex)
-      (text_unit_content))
-    (par_tbl)
-    (text_unit
+      (textUnitContent))
+    (parTbl)
+    (textUnit
       (colorFontIndex)
-      (text_unit_content))
-    (par_tbl
-      (alignment_config))
-    (text_unit
+      (textUnitContent))
+    (parTbl
+      (alignmentConfig))
+    (textUnit
       (colorFontIndex)
-      (text_unit_content)))
+      (textUnitContent)))

@@ -12,27 +12,27 @@
 ----------------------------
 (document
     (fonttbl
-      (font_definition
+      (fontDefinition
           (fontname)))
     (colortbl
     (colorvalue
-        (static_number_literal)
-        (static_number_literal)
-        (static_number_literal))
+        (staticNumberLiteral)
+        (staticNumberLiteral)
+        (staticNumberLiteral))
     (colorvalue
-        (static_number_literal)
-        (static_number_literal)
-        (static_number_literal))
+        (staticNumberLiteral)
+        (staticNumberLiteral)
+        (staticNumberLiteral))
     (colorvalue
-        (static_number_literal)
-        (static_number_literal)
-        (static_number_literal)))
-    (par_tbl)
-    (text_unit
+        (staticNumberLiteral)
+        (staticNumberLiteral)
+        (staticNumberLiteral)))
+    (parTbl)
+    (textUnit
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (text_unit_content)))
+        (textUnitContent)))
 
 
 =============================
@@ -49,30 +49,30 @@
 ----------------------------
 (document
     (fonttbl
-      (font_definition
+      (fontDefinition
         (fontname)))
     (colortbl
     (colorvalue
-        (static_number_literal)
-        (static_number_literal)
-        (static_number_literal))
+        (staticNumberLiteral)
+        (staticNumberLiteral)
+        (staticNumberLiteral))
     (colorvalue
-        (static_number_literal)
-        (static_number_literal)
-        (static_number_literal))
+        (staticNumberLiteral)
+        (staticNumberLiteral)
+        (staticNumberLiteral))
     (colorvalue
-        (static_number_literal)
-        (static_number_literal)
-        (static_number_literal)))
-    (par_tbl)
-    (text_unit
+        (staticNumberLiteral)
+        (staticNumberLiteral)
+        (staticNumberLiteral)))
+    (parTbl)
+    (textUnit
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (text_unit_content))
-    (text_unit
+        (textUnitContent))
+    (textUnit
         (colorFontIndex)
-        (text_unit_content)))
+        (textUnitContent)))
 
 
 =============================
@@ -89,28 +89,28 @@
 ----------------------------
 (document
       (fonttbl
-        (font_definition
+        (fontDefinition
           (fontname)))
       (colortbl
         (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal))
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral))
         (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal))
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral))
         (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal)))
-      (par_tbl)
-      (text_unit
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral)))
+      (parTbl)
+      (textUnit
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (colorFontIndex)
-        (text_unit_content)))
+        (textUnitContent)))
 

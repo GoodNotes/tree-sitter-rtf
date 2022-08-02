@@ -11,24 +11,24 @@
 ----------------------------
  (document
       (fonttbl
-        (font_definition
+        (fontDefinition
           (fontname)))
       (colortbl
         (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal)))
-      (text_unit
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral)))
+      (textUnit
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontSize)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontSize)
-        (text_unit_content)))
+        (textUnitContent)))
   
 
 =============================
@@ -47,25 +47,25 @@
 ----------------------------
  (document
       (fonttbl
-        (font_definition
+        (fontDefinition
           (fontname)))
       (colortbl
         (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal)))
-      (par_tbl)
-      (text_unit
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral)))
+      (parTbl)
+      (textUnit
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontSize)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontSize)
-        (text_unit_content)))
+        (textUnitContent)))
   
 
 
@@ -86,25 +86,25 @@ Pepe}
 ----------------------------
      (document
       (fonttbl
-        (font_definition
+        (fontDefinition
           (fontname)))
       (colortbl
         (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal)))
-      (par_tbl)
-      (text_unit
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral)))
+      (parTbl)
+      (textUnit
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontSize)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontSize)
-        (text_unit_content)))
+        (textUnitContent)))
 
 
 =============================
@@ -125,45 +125,45 @@ Name, surname with different style font and bold no bold content
 ----------------------------
     (document
       (fonttbl
-        (font_definition
+        (fontDefinition
           (fontname)
           (fonttypeface))
-        (font_definition
+        (fontDefinition
           (fontname))
-        (font_definition
+        (fontDefinition
           (fontname)
           (fonttypeface))
-        (font_definition
+        (fontDefinition
           (fontname)
           (fonttypeface)))
       (colortbl
         (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal))
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral))
         (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal)))
-      (par_tbl)
-      (text_unit
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral)))
+      (parTbl)
+      (textUnit
         (fontIndex)
         (boldEnabled)
         (fontSize)
         (colorFontIndex)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontIndex)
         (boldDisabled)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontIndex)
         (boldEnabled)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontIndex)
         (boldDisabled)
-        (text_unit_content)))
+        (textUnitContent)))
 
 
 =============================
@@ -185,52 +185,52 @@ Name, surname with several style fonts mixed
 ----------------------------
     (document
      (fonttbl
-        (font_definition
+        (fontDefinition
           (fontname)
           (fonttypeface))
-        (font_definition
+        (fontDefinition
           (fontname))
-        (font_definition
+        (fontDefinition
           (fontname)
           (fonttypeface))
-        (font_definition
+        (fontDefinition
           (fontname)
           (fonttypeface))
-        (font_definition
+        (fontDefinition
           (fontname)
           (fonttypeface)))
       (colortbl
         (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal))
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral))
         (colorvalue
-          (static_number_literal)
-          (static_number_literal)
-          (static_number_literal)))
-      (par_tbl)
-      (text_unit
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral)))
+      (parTbl)
+      (textUnit
         (fontIndex)
         (boldEnabled)
         (fontSize)
         (colorFontIndex)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontIndex)
         (boldDisabled)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontIndex)
         (boldEnabled)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontIndex)
         (boldDisabled)
-        (text_unit_content))
-      (text_unit
+        (textUnitContent))
+      (textUnit
         (fontIndex)
         (italicEnabled)
         (boldEnabled)
         (underlineEnabled)
         (strikeEnabled)
-        (text_unit_content)))
+        (textUnitContent)))

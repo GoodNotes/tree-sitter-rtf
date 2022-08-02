@@ -18,25 +18,25 @@ Fin}
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral))
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (par_tbl
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (parTbl
     (lineSpacing)
     (lineGap))
-  (text_unit
+  (textUnit
     (fontIndex)
     (fontSize)
     (colorFontIndex)
-    (text_unit_content)))
+    (textUnitContent)))
 
 =============================
 Multiline with Line spacing 36, moving line up 9
@@ -58,26 +58,26 @@ Fin}
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral))
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (par_tbl
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (parTbl
     (lineSpacing)
     (lineGap))
-  (text_unit
+  (textUnit
     (fontIndex)
     (fontSize)
     (colorFontIndex)
     (positionUp)
-    (text_unit_content)))
+    (textUnitContent)))
 
 =============================
 Multiline with Line spacing 36, moving line down 7
@@ -99,23 +99,23 @@ Fin}
 ----------------------------
 (document
   (fonttbl
-    (font_definition
+    (fontDefinition
       (fontname)))
   (colortbl
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal))
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral))
     (colorvalue
-      (static_number_literal)
-      (static_number_literal)
-      (static_number_literal)))
-  (par_tbl
+      (staticNumberLiteral)
+      (staticNumberLiteral)
+      (staticNumberLiteral)))
+  (parTbl
     (lineSpacing)
     (lineGap))
-  (text_unit
+  (textUnit
     (fontIndex)
     (fontSize)
     (colorFontIndex)
     (positionDown)
-    (text_unit_content)))
+    (textUnitContent)))
