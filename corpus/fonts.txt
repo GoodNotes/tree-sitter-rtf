@@ -126,15 +126,14 @@ Name, surname with different style font and bold no bold content
       (fonttbl
         (fontDefinition
           (fontname)
-          (fonttypeface))
+          (fontWeight))
         (fontDefinition
           (fontname))
         (fontDefinition
           (fontname)
-          (fonttypeface))
+          (fontWeight))
         (fontDefinition
-          (fontname)
-          (fonttypeface)))
+          (fontname)))
       (colortbl
         (colorvalue
           (staticNumberLiteral)
@@ -186,18 +185,18 @@ Name, surname with several style fonts mixed
      (fonttbl
         (fontDefinition
           (fontname)
-          (fonttypeface))
+          (fontWeight))
         (fontDefinition
           (fontname))
         (fontDefinition
           (fontname)
-          (fonttypeface))
+          (fontWeight))
+        (fontDefinition
+          (fontname))
         (fontDefinition
           (fontname)
-          (fonttypeface))
-        (fontDefinition
-          (fontname)
-          (fonttypeface)))
+          (fontWeight)
+          (fontStyle)))
       (colortbl
         (colorvalue
           (staticNumberLiteral)

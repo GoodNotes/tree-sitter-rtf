@@ -10,7 +10,7 @@ Empty RTF document
   (fonttbl
     (fontDefinition
       (fontname)
-      (fonttypeface)))
+      (fontWeight)))
   (colortbl
     (colorvalue
       (staticNumberLiteral)
@@ -34,7 +34,7 @@ Minimal RTF document
   (fonttbl
     (fontDefinition
       (fontname)
-      (fonttypeface)))
+      (fontWeight)))
   (colortbl
     (colorvalue
       (staticNumberLiteral)
@@ -63,7 +63,7 @@ Pedro}
   (fonttbl
     (fontDefinition
       (fontname)
-      (fonttypeface)))
+      (fontWeight)))
   (colortbl
     (colorvalue
       (staticNumberLiteral)
@@ -153,7 +153,7 @@ Pedro}
   (fonttbl
     (fontDefinition
       (fontname)
-      (fonttypeface)))
+      (fontWeight)))
   (colortbl
     (colorvalue
       (staticNumberLiteral)
@@ -183,7 +183,7 @@ Pedro}
   (fonttbl
     (fontDefinition
       (fontname)
-      (fonttypeface)))
+      (fontWeight)))
   (colortbl
     (colorvalue
       (staticNumberLiteral)

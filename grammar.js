@@ -102,10 +102,18 @@ module.exports = grammar({
       field('fontname', $.fontname),
       optional(seq(
         '-', 
-        field('fonttypeface', $.fonttypeface),
+        optional('Regular'),
+        optional($.fontWeight),
+        optional($.fontStyle)
       ))
     ),
-
+    
+    fontWeight: () => choice(
+      'Bold',
+    ),
+    fontStyle: () => choice(
+      'Italic',
+    ),
     fontname: $ => /[\w\s]+/,
     fonttypeface: $ => $._static_PCDATA,
 
