@@ -295,7 +295,6 @@ module.exports = grammar({
       // optional($._info), // => NOT NEEDED FOR NOW
       // optional($._xmlnstbl), // => NOT NEEDED FOR NOW
       // repeat($.docfmt), // => NOT NEEDED FOR NOW
-      /\n/,
       repeat($._paper_config),
       repeat($._par_config),
       repeat($.textUnit)
@@ -331,9 +330,9 @@ module.exports = grammar({
       /\\qj/,
     ),
 
-    textUnit: $ => seq(repeat($._textUnit_config), $.textUnitContent),
+    textUnit: $ => seq(repeat($._textUnit_config), choice($.textUnitContent, $.textUnitEmoji)),
 
-    _textUnit_config: $ => seq(choice(
+    _textUnit_config: $ => prec.right(seq(choice(
       seq('\\f', field('fontIndex', $.fontIndex)),
       seq('\\fs', field('fontSize', $.fontSize)),
       seq('\\cf', field('colorFontIndex', $.colorFontIndex)),
@@ -348,9 +347,28 @@ module.exports = grammar({
       $._strikeColorIndex,
       seq('\\dn', field('positionDown', $.positionDown)),
       seq('\\up', field('positionUp', $.positionUp)),
-      ), optional(/\s/)),
+      ), optional(/\s/))
+    ),
 
-    textUnitContent: $ => prec.right(repeat1(
+    textUnitContent: $ => $._textCommonUnitContent,
+
+    textUnitEmoji: $ => seq(
+      /\\uc\d+/,
+      $._unicodeBlock,
+      repeat(choice(
+        $._unicodeBlock,
+        $.basicEmojiTextContent
+      )),
+    ),
+
+    _unicodeBlock: $ => seq(
+      '\\u',
+      field('unicode', $.unicode),
+    ),
+
+    textUnitEmojiContent: $ => $._textCommonUnitContent,
+
+    _textCommonUnitContent: $ => prec.right(repeat1(
       choice(
         /\w/,
         new RegExp ('\\\\['+ESCAPE_SET+']'),
@@ -361,7 +379,8 @@ module.exports = grammar({
         '\\'
       )
     )),
-
+    unicode: () => /\d+/,
+    basicEmojiTextContent: () => choice(/[\d|\s]+/),
     fontIndex: $ => $._static_int_number_literal,
     fontSize: $ => $._static_int_number_literal,
     colorFontIndex: $ => $._static_int_number_literal,
