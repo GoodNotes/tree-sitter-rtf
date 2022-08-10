@@ -4,56 +4,45 @@ const ESCAPE_SET = 'abtnvfrE!"#\\$&\'\\(\\)\\*,;<>\\?\\[\\\\\\]^`{\\|}~';
 
 module.exports = grammar({
   name: "rtf",
+  extras: $ => ['\n'], // They are the ignored characters
   rules: {
-    document: $ => alias($.group, 'document'),
+    document: $ => seq(
+      '{',
+      $._document_header,
+      optional($._document_area),
+      '}'
+    ),
 
-    group: $ => repeat1(
-      choice(
-        $._document_metadata,
-        $.textUnit,
-        $._end_of_document
-    )),
-
-    _document_metadata: $ => choice(
+    _document_header: $ => seq(
+      '\\rtf1',
+      optional('\\fbidis'),
       $._header_character_set,
-      $._cocoa_custom_header,
-      $.colortbl,
-      $._expcolortbl,
-      $._paper_tbl,
-      $.parTbl
+      optional($._from),
+      optional(/\\cocoatextscaling\d+/),
+      optional(/\\cocoaplatform\d+/),
+      optional($.fonttbl),
+      optional($._filetbl),
+      optional($.colortbl),
+      optional($._expcolortbl),
     ),
-    
-    _paper_tbl: $ => seq(
-      repeat1($._paper_config),
-      /\n/
-    ),
-
-    parTbl: $ => seq(
-      repeat1($._par_config),
-      /\n/
-    ),
-
-    _end_of_document: $ => '}',
 
     _header_character_set: $ => seq(
-      '{\\rtf1',
       choice('\\ansi', '\\mac', '\\pc', '\\pca', '\\ansicpg', '\\cpg', '\\cpgid'),
       /\\ansicpg\d+/,
-      optional(/\\cocoartf\d+/)
+      optional(/\\cocoartf\d+/),
     ),
 
     _cocoa_custom_header: $ => seq(
       optional(/\\cocoatextscaling\d+/),
       optional(/\\cocoaplatform\d+/),
-      $.fonttbl
+      $.fonttbl,
     ),
 
     _from: $ => choice('\\fromtext', '\\fromhtml'),
 
     // FONT TABLE
     fonttbl: $ => seq(
-      '{',
-      '\\fonttbl',
+      '{\\fonttbl',
       repeat1(choice($._fontinfo, $._fontinfo_alt)),
       '}',
     ),
@@ -68,6 +57,7 @@ module.exports = grammar({
       optional($._nontaggedname),
       optional($._fontemb),
       optional(/\\cpg\d+/),
+      ' ',
       $.fontDefinition,
       optional($._fontaltname),
       ';',
@@ -97,8 +87,7 @@ module.exports = grammar({
       ';}',
     ),
 
-    fontDefinition: $ => seq(
-      /\s/, 
+    fontDefinition: $ => seq( 
       field('fontname', $.fontname),
       optional(seq(
         '-', 
@@ -167,10 +156,9 @@ module.exports = grammar({
 
     // COLOR TABLE
     colortbl: $ => seq(
-      '{',
-      '\\colortbl',
+      '{\\colortbl',
       repeat1($._colordef),
-      '}\n',
+      '}',
     ),
 
     _colordef: $ => seq(
@@ -203,7 +191,7 @@ module.exports = grammar({
         /\\c\d+/,
         ';',
       )),
-      '}\n',
+      '}',
     ),
 
     _data: $ => choice(
@@ -292,12 +280,21 @@ module.exports = grammar({
 
     // DOCUMENT AREA => FROM HERE EVERYTHING IS CUSTOM
     _document_area: $ => seq(
-      // optional($._info), // => NOT NEEDED FOR NOW
-      // optional($._xmlnstbl), // => NOT NEEDED FOR NOW
-      // repeat($.docfmt), // => NOT NEEDED FOR NOW
-      repeat($._paper_config),
-      repeat($._par_config),
-      repeat($.textUnit)
+      repeat1($._repeatDocument_area),
+    ),
+
+    _repeatDocument_area: $ => seq(
+      optional($._paperTbl),
+      optional($.parTbl),
+      $.textUnit,
+    ),
+
+    parTbl: $ => seq(
+      repeat1($._par_config),
+    ),
+
+    _paperTbl: $ => seq(
+      repeat1($._paper_config),
     ),
 
     _paper_config: $ => choice(
@@ -330,9 +327,16 @@ module.exports = grammar({
       /\\qj/,
     ),
 
-    textUnit: $ => seq(repeat($._textUnit_config), choice($.textUnitContent, $.textUnitEmoji)),
+    textUnit: $ => seq(
+      repeat1(seq(
+        repeat1($._textUnit_config), 
+        ' ',
+      )),
+      repeat1(choice($._textUnitEmoji, $.textUnitContent)),
+      optional('\n')
+    ),
 
-    _textUnit_config: $ => prec.right(seq(choice(
+    _textUnit_config: $ => choice(
       seq('\\f', field('fontIndex', $.fontIndex)),
       seq('\\fs', field('fontSize', $.fontSize)),
       seq('\\cf', field('colorFontIndex', $.colorFontIndex)),
@@ -347,40 +351,32 @@ module.exports = grammar({
       $._strikeColorIndex,
       seq('\\dn', field('positionDown', $.positionDown)),
       seq('\\up', field('positionUp', $.positionUp)),
-      ), optional(/\s/))
     ),
 
-    textUnitContent: $ => $._textCommonUnitContent,
+    textUnitContent: $ => prec(2, repeat1($._commonTextUnitContent)),
 
-    textUnitEmoji: $ => seq(
-      /\\uc\d+/,
-      $._unicodeBlock,
-      repeat(choice(
+    _commonTextUnitContent: () => choice(
+      /[\w| |!|\.|:]+/,
+      '\\\n',
+      new RegExp ('\\\\['+ESCAPE_SET+']'),
+      // Chars that sholud be escaped but are not in RTF
+      '\\'
+    ),
+
+    _textUnitEmoji: $ => prec(2, seq(
+      repeat1(
         $._unicodeBlock,
-        $.basicEmojiTextContent
-      )),
-    ),
+      ),
+    )),
 
     _unicodeBlock: $ => seq(
+      optional(/\\uc\d+/),
       '\\u',
       field('unicode', $.unicode),
+      ' ',
     ),
 
-    textUnitEmojiContent: $ => $._textCommonUnitContent,
-
-    _textCommonUnitContent: $ => prec.right(repeat1(
-      choice(
-        /\w/,
-        new RegExp ('\\\\['+ESCAPE_SET+']'),
-        // Chars that sholud be escaped but are not in RTF
-        '!',
-        '.',
-        ":",
-        '\\'
-      )
-    )),
     unicode: () => /\d+/,
-    basicEmojiTextContent: () => choice(/[\d|\s]+/),
     fontIndex: $ => $._static_int_number_literal,
     fontSize: $ => $._static_int_number_literal,
     colorFontIndex: $ => $._static_int_number_literal,
