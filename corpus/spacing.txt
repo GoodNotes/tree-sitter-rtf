@@ -7,14 +7,14 @@ Multiline with Line spacing 36
 {\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl-720\slleading160\partightenfactor0
 
-\f0\fs48 \cf2 Esto es un salto de linea\
-Esto son dos\
+\f0\fs48 \cf2 This is a breakline\
+This are two breaklines\
 \
-Esto son tres\
+These are three\
 \
 \
-Esto termina en \\\
-Fin}
+This ends with \\\
+End}
 ----------------------------
 (document
   (fonttbl
@@ -59,14 +59,14 @@ Multiline with Line spacing 36, moving line up 9
 {\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl-720\slleading160\partightenfactor0
 
-\f0\fs48 \cf2 \up9 Esto es un salto de linea\
-Esto son dos\
+\f0\fs48 \cf2 \up9 This is a breakline\
+This are two breaklines\
 \
-Esto son tres\
+These are three\
 \
 \
-Esto termina en \\\
-Fin}
+This ends with \\\
+End}
 ----------------------------
 (document
   (fonttbl
@@ -112,14 +112,14 @@ Multiline with Line spacing 36, moving line down 7
 {\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl-720\slleading160\partightenfactor0
 
-\f0\fs48 \cf2 \dn7 Esto es un salto de linea\
-Esto son dos\
+\f0\fs48 \cf2 \dn7 This is a breakline\
+This are two breaklines\
 \
-Esto son tres\
+These are three\
 \
 \
-Esto termina en \\\
-Fin}
+This ends with \\\
+End}
 ----------------------------
 (document
   (fonttbl

@@ -356,7 +356,7 @@ module.exports = grammar({
     textUnitContent: $ => prec(2, repeat1($._commonTextUnitContent)),
 
     _commonTextUnitContent: () => choice(
-      /[\w| |!|\.|:]+/,
+      /[\w| |!|\.|:|\-]+/,
       '\\\n',
       new RegExp ('\\\\['+ESCAPE_SET+']'),
       // Chars that sholud be escaped but are not in RTF

@@ -214,7 +214,7 @@ Hello 👋
         (unicode)))
 
 =============================
-Hello 👋 Adios 👋👋
+Hello 👋 Goodbye 👋👋
 =============================
 {\rtf1\ansi\ansicpg1252\cocoartf2638
 \cocoatextscaling1\cocoaplatform1{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 AppleColorEmoji;\f2\fswiss\fcharset0 Helvetica;
@@ -225,7 +225,7 @@ Hello 👋 Adios 👋👋
 
 \f0\fs48 \cf2 Hello 
 \f1 \uc0\u55357 \u56395 
-\f2 Adios 
+\f2 Goodbye 
 \f1 \uc0\u55357 \u56395 \u55357 1\u56395 }
 ----------------------------
 (document
