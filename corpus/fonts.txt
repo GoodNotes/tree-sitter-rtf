@@ -11,7 +11,8 @@
 ----------------------------
  (document
       (fonttbl
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)))
       (colortbl
         (colorvalue
@@ -47,7 +48,8 @@
 ----------------------------
  (document
       (fonttbl
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)))
       (colortbl
         (colorvalue
@@ -88,7 +90,8 @@ Pepe}
 ----------------------------
      (document
       (fonttbl
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)))
       (colortbl
         (colorvalue
@@ -130,15 +133,19 @@ Name, surname with different style font and bold no bold content
 ----------------------------
     (document
       (fonttbl
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)
           (fontWeight))
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname))
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)
           (fontWeight))
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)))
       (colortbl
         (colorvalue
@@ -190,17 +197,22 @@ Name, surname with several style fonts mixed
 ----------------------------
     (document
      (fonttbl
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)
           (fontWeight))
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname))
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)
           (fontWeight))
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname))
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)
           (fontWeight)
           (fontStyle)))
@@ -255,7 +267,8 @@ Single word underlined
 ----------------------------
     (document
       (fonttbl
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)))
       (colortbl
         (colorvalue

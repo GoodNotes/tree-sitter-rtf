@@ -12,7 +12,8 @@ Right aligned text unit
 ----------------------------
 (document
       (fonttbl
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)))
       (colortbl
         (colorvalue
@@ -41,7 +42,8 @@ Center aligned text unit
 ----------------------------
 (document
     (fonttbl
-      (fontDefinition
+      (fontinfo
+        (charset)
         (fontname)))
     (colortbl
       (colorvalue
@@ -70,7 +72,8 @@ Justified aligned text unit
 ----------------------------
 (document
   (fonttbl
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname)))
   (colortbl
     (colorvalue
@@ -106,7 +109,8 @@ Justified aligned text unit
 ----------------------------
 (document
     (fonttbl
-      (fontDefinition
+      (fontinfo
+          (charset)
         (fontname)))
     (colortbl
       (colorvalue

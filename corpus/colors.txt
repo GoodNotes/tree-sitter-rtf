@@ -12,7 +12,8 @@
 ----------------------------
 (document
     (fonttbl
-      (fontDefinition
+      (fontinfo
+          (charset)
           (fontname)))
     (colortbl
     (colorvalue
@@ -49,7 +50,8 @@
 ----------------------------
 (document
     (fonttbl
-      (fontDefinition
+      (fontinfo
+        (charset)
         (fontname)))
     (colortbl
     (colorvalue
@@ -89,7 +91,8 @@
 ----------------------------
 (document
       (fonttbl
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)))
       (colortbl
         (colorvalue
@@ -131,9 +134,11 @@ Huge expanded color table
 ----------------------------
     (document
       (fonttbl
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname))
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)))
       (colortbl
         (colorvalue

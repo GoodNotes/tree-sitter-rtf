@@ -8,7 +8,8 @@ Empty RTF document
 ----------------------------
 (document
   (fonttbl
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname)
       (fontWeight)))
   (colortbl
@@ -32,7 +33,8 @@ Minimal RTF document
 ----------------------------
 (document
   (fonttbl
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname)
       (fontWeight)))
   (colortbl
@@ -63,7 +65,8 @@ Minimal RTF document
 ----------------------------
 (document
   (fonttbl
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname)))
   (colortbl
     (colorvalue
@@ -96,9 +99,11 @@ Minimal RTF document
 ----------------------------
 (document
   (fonttbl
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname))
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname)))
   (colortbl
     (colorvalue
@@ -125,7 +130,8 @@ Minimal RTF document
 ----------------------------
 (document
   (fonttbl
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname)
       (fontWeight)))
   (colortbl
@@ -155,7 +161,8 @@ Minimal RTF document
 ----------------------------
 (document
   (fonttbl
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname)
       (fontWeight)))
   (colortbl
@@ -188,7 +195,8 @@ Text with '!' as special character
 ----------------------------
 (document
   (fonttbl
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname)))
   (colortbl
     (colorvalue
@@ -217,7 +225,8 @@ Text with '.' as special character
 ----------------------------
 (document
   (fonttbl
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname)))
   (colortbl
     (colorvalue
@@ -245,7 +254,8 @@ Text with huge font size and centered
 ----------------------------
     (document
       (fonttbl
-        (fontDefinition
+        (fontinfo
+          (charset)
           (fontname)))
       (colortbl
         (colorvalue
@@ -301,3 +311,109 @@ _:::\'c7\'a8\'c7*^\'bf?@different chars\
 }
 ----------------------------
     (document
+       (fonttbl
+        (fontinfo
+          (charset)
+          (fontname))
+        (fontinfo
+          (charset)
+          (fontname)))
+      (colortbl
+        (colorvalue
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral))
+        (colorvalue
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral))
+        (colorvalue
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral))
+        (colorvalue
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral))
+        (colorvalue
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral)))
+      (parTbl
+        (lineSpacing))
+      (textUnit
+        (fontIndex)
+        (fontSize)
+        (colorFontIndex)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent)
+        (specialChar)
+        (specialChar)
+        (specialChar)
+        (textUnitContent)
+        (specialChar)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent))
+      (parTbl
+        (lineSpacing)
+        (alignmentConfig))
+      (textUnit
+        (colorFontIndex)
+        (textUnitContent)
+        (textUnitContent))
+      (parTbl
+        (lineSpacing)
+        (alignmentConfig))
+      (textUnit
+        (colorFontIndex)
+        (textUnitContent)
+        (textUnitContent))
+      (parTbl
+        (lineSpacing)
+        (lineGap)
+        (alignmentConfig))
+      (textUnit
+        (colorFontIndex)
+        (positionDown)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent)
+        (textUnitContent))
+      (parTbl
+        (lineSpacing)
+        (lineGap))
+      (textUnit
+        (colorFontIndex)
+        (positionUp)
+        (textUnitContent)
+        (textUnitContent))
+      (textUnit
+        (colorFontIndex)
+        (textUnitContent))
+      (textUnit
+        (colorFontIndex)
+        (textUnitContent))
+      (textUnit
+        (colorFontIndex)
+        (textUnitContent))
+      (textUnit
+        (colorFontIndex)
+        (textUnitContent))
+      (textUnit
+        (fontIndex)
+        (unicode)
+        (unicode))
+      (textUnit
+        (fontIndex)
+        (textUnitContent)))

@@ -18,7 +18,8 @@ End}
 ----------------------------
 (document
   (fonttbl
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname)))
   (colortbl
     (colorvalue
@@ -70,7 +71,8 @@ End}
 ----------------------------
 (document
   (fonttbl
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname)))
   (colortbl
     (colorvalue
@@ -123,7 +125,8 @@ End}
 ----------------------------
 (document
   (fonttbl
-    (fontDefinition
+    (fontinfo
+      (charset)
       (fontname)))
   (colortbl
     (colorvalue

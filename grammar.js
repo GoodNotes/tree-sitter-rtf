@@ -32,40 +32,37 @@ module.exports = grammar({
       optional(/\\cocoartf\d+/),
     ),
 
-    _cocoa_custom_header: $ => seq(
-      optional(/\\cocoatextscaling\d+/),
-      optional(/\\cocoaplatform\d+/),
-      $.fonttbl,
-    ),
-
     _from: $ => choice('\\fromtext', '\\fromhtml'),
 
     // FONT TABLE
     fonttbl: $ => seq(
       '{\\fonttbl',
-      repeat1(choice($._fontinfo, $._fontinfo_alt)),
+      repeat(choice($.fontinfo, $._fontinfo_alt)),
       '}',
     ),
 
-    _fontinfo: $ => seq(
+    fontinfo: $ => seq(
       optional($._themefont),
       /\\f\d+/,
       $._fontfamily,
-      optional(/\\fcharset\d+/),
+      optional(seq(
+        '\\fcharset',
+        field('charset', $.charset)
+      )),
       optional(/\\fprq\d+/),
       optional($._panose),
       optional($._nontaggedname),
       optional($._fontemb),
       optional(/\\cpg\d+/),
       ' ',
-      $.fontDefinition,
+      $._fontDefinition,
       optional($._fontaltname),
       ';',
     ),
 
     _fontinfo_alt: $ => seq(
       '{',
-      $._fontinfo,
+      $.fontinfo,
       '}',
     ),
 
@@ -87,7 +84,7 @@ module.exports = grammar({
       ';}',
     ),
 
-    fontDefinition: $ => seq( 
+    _fontDefinition: $ => seq( 
       field('fontname', $.fontname),
       optional(seq(
         '-', 
@@ -184,12 +181,20 @@ module.exports = grammar({
       '{\\\*',
       '\\expandedcolortbl',
       ';;',
-      repeat(seq(
-        choice('\\cssrgb', '\\cspthree'),
-        /\\c\d+/,
-        /\\c\d+/,
-        /\\c\d+/,
-        ';',
+      repeat(choice(
+        seq(
+          choice('\\cssrgb', '\\cspthree', '\\csgenericrgb'),
+          /\\c\d+/,
+          /\\c\d+/,
+          /\\c\d+/,
+          ';',
+        ),
+        seq(
+          '\\csgray',
+          /\\c\d+/,
+          /\\c\d+/,
+          ';',
+        ),
       )),
       '}',
     ),
@@ -285,12 +290,17 @@ module.exports = grammar({
 
     _repeatDocument_area: $ => seq(
       optional($._paperTbl),
+      optional($._formatingProperties),
       optional($.parTbl),
       $.textUnit,
     ),
 
     parTbl: $ => seq(
       repeat1($._par_config),
+    ),
+
+    _formatingProperties: $ => repeat1(
+      /\\deftab\d+/,
     ),
 
     _paperTbl: $ => seq(
@@ -311,6 +321,8 @@ module.exports = grammar({
       '\\pard',
       /\\tx\d+/,
       '\\pardirnatural',
+      /\\pardeftab\d+/,
+      /\\ri\d+/,
       /\\partightenfactor\d+/,
       seq('\\sl', field('lineSpacing', $.lineSpacing)),
       seq('\\slleading', field('lineGap', $.lineGap)),
@@ -332,7 +344,7 @@ module.exports = grammar({
         repeat1($._textUnit_config), 
         ' ',
       )),
-      repeat1(choice($._textUnitEmoji, $.textUnitContent)),
+      repeat1(choice($._textUnitEmoji, $._textSpecialChar, $.textUnitContent,)),
       optional('\n')
     ),
 
@@ -351,12 +363,20 @@ module.exports = grammar({
       $._strikeColorIndex,
       seq('\\dn', field('positionDown', $.positionDown)),
       seq('\\up', field('positionUp', $.positionUp)),
+      // Uninterpreted configs
+      /\\cb\d+/,
+      /\\expnd\d+/,
+      /\\expndtw\d+/,
+      /\\kerning\d+/,
+      /\\outl\d+/,
+      /\\strokewidth\d+/,
+      /\\strokec\d+/,
     ),
 
     textUnitContent: $ => prec(2, repeat1($._commonTextUnitContent)),
 
     _commonTextUnitContent: () => choice(
-      /[\w| |!|\.|:|\-|\t]+/,
+      /[\w| |!|\.|:|\-|\t|\?|\*|^|@]+/,
       '\\\n',
       new RegExp ('\\\\['+ESCAPE_SET+']'),
       // Chars that sholud be escaped but are not in RTF
@@ -376,7 +396,20 @@ module.exports = grammar({
       ' ',
     ),
 
+    _textSpecialChar: $ => prec(2, seq(
+      repeat1(
+        $._specialCharBlock,
+      ),
+    )),
+
+    _specialCharBlock: $ => seq(
+      '\\\'',
+      field('specialChar', $.specialChar),
+    ),
+    
+    charset: () => /\d+/,
     unicode: () => /\d+/,
+    specialChar: () => /[0-9a-fA-F]+/,
     fontIndex: $ => $._static_int_number_literal,
     fontSize: $ => $._static_int_number_literal,
     colorFontIndex: $ => $._static_int_number_literal,
