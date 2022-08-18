@@ -9,6 +9,7 @@ Empty RTF document
 (document
   (fonttbl
     (fontinfo
+      (fontFamily)
       (charset)
       (fontname)
       (fontWeight)))
@@ -34,6 +35,7 @@ Minimal RTF document
 (document
   (fonttbl
     (fontinfo
+      (fontFamily)
       (charset)
       (fontname)
       (fontWeight)))
@@ -66,6 +68,7 @@ Minimal RTF document
 (document
   (fonttbl
     (fontinfo
+      (fontFamily)
       (charset)
       (fontname)))
   (colortbl
@@ -100,9 +103,11 @@ Minimal RTF document
 (document
   (fonttbl
     (fontinfo
+      (fontFamily)
       (charset)
       (fontname))
     (fontinfo
+      (fontFamily)
       (charset)
       (fontname)))
   (colortbl
@@ -131,6 +136,7 @@ Minimal RTF document
 (document
   (fonttbl
     (fontinfo
+      (fontFamily)
       (charset)
       (fontname)
       (fontWeight)))
@@ -162,6 +168,7 @@ Minimal RTF document
 (document
   (fonttbl
     (fontinfo
+      (fontFamily)
       (charset)
       (fontname)
       (fontWeight)))
@@ -196,6 +203,7 @@ Text with '!' as special character
 (document
   (fonttbl
     (fontinfo
+      (fontFamily)
       (charset)
       (fontname)))
   (colortbl
@@ -226,6 +234,7 @@ Text with '.' as special character
 (document
   (fonttbl
     (fontinfo
+      (fontFamily)
       (charset)
       (fontname)))
   (colortbl
@@ -255,6 +264,7 @@ Text with huge font size and centered
     (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -313,9 +323,11 @@ _:::\'c7\'a8\'c7*^\'bf?@different chars\
     (document
        (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl

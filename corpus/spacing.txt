@@ -19,6 +19,7 @@ End}
 (document
   (fonttbl
     (fontinfo
+      (fontFamily)
       (charset)
       (fontname)))
   (colortbl
@@ -72,6 +73,7 @@ End}
 (document
   (fonttbl
     (fontinfo
+      (fontFamily)
       (charset)
       (fontname)))
   (colortbl
@@ -126,6 +128,7 @@ End}
 (document
   (fonttbl
     (fontinfo
+      (fontFamily)
       (charset)
       (fontname)))
   (colortbl

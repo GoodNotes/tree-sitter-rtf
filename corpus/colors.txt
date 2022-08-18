@@ -13,8 +13,9 @@
 (document
     (fonttbl
       (fontinfo
-          (charset)
-          (fontname)))
+        (fontFamily)
+        (charset)
+        (fontname)))
     (colortbl
     (colorvalue
         (staticNumberLiteral)
@@ -51,6 +52,7 @@
 (document
     (fonttbl
       (fontinfo
+        (fontFamily)
         (charset)
         (fontname)))
     (colortbl
@@ -92,6 +94,7 @@
 (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -135,9 +138,11 @@ Huge expanded color table
     (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl

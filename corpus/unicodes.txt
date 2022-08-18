@@ -12,6 +12,7 @@ Text with a single emoji 👾
 (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -47,6 +48,7 @@ Text with a single emoji ♧
     (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -82,6 +84,7 @@ Text with a single emoji ♧ ⛑
 (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -118,6 +121,7 @@ Text with a single emoji ♧ ⛑ 1♧
 (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -158,6 +162,7 @@ Text with a single emoji 🕹
 (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -194,9 +199,11 @@ Hello 👋
 (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -238,12 +245,15 @@ Hello 👋 Goodbye 👋👋
 (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -303,9 +313,11 @@ Several emojis in different lines
 (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -383,6 +395,7 @@ Document with special chars ç
 (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -423,6 +436,7 @@ Document with special chars 中国人
 (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -468,6 +482,7 @@ Document with special chars 你Ç
 (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -508,6 +523,7 @@ Document with special chars 在家里面有\n不想去去医院
 (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl

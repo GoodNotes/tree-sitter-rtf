@@ -44,7 +44,7 @@ module.exports = grammar({
     fontinfo: $ => seq(
       optional($._themefont),
       /\\f\d+/,
-      $._fontfamily,
+      $._fontFamilyBloq,
       optional(seq(
         '\\fcharset',
         field('charset', $.charset)
@@ -68,7 +68,12 @@ module.exports = grammar({
 
     _themefont: $ => choice('\\flomajor', '\\fhimajor', '\\fdbmajor', '\\fbimajor', '\\flominor', '\\fhiminor', '\\fbdminor', '\\fbiminor'),
 
-    _fontfamily: $ => choice('\\fnil', '\\froman', '\\fswiss', '\\fmodern', '\\fscript', '\\fdecor', '\\ftech', '\\fbidi'),
+    _fontFamilyBloq: $ => seq(
+      '\\f',
+      field('fontFamily', $.fontFamily),
+    ),
+
+    fontFamily: $ => choice('nil', 'roman', 'swiss', 'modern', 'script', 'decor', 'tech', 'bidi'),
 
     _panose: $ => seq(
       '{\\\*',

@@ -12,6 +12,7 @@
  (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -49,6 +50,7 @@
  (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -91,6 +93,7 @@ Pepe}
      (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -134,17 +137,21 @@ Name, surname with different style font and bold no bold content
     (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)
           (fontWeight))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)
           (fontWeight))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
@@ -198,20 +205,25 @@ Name, surname with several style fonts mixed
     (document
      (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)
           (fontWeight))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)
           (fontWeight))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname))
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)
           (fontWeight)
@@ -268,6 +280,7 @@ Single word underlined
     (document
       (fonttbl
         (fontinfo
+          (fontFamily)
           (charset)
           (fontname)))
       (colortbl
