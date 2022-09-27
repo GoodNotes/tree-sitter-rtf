@@ -55,7 +55,7 @@ module.exports = grammar({
       optional($._fontemb),
       optional(/\\cpg\d+/),
       ' ',
-      $._fontDefinition,
+      $.fontname,
       optional($._fontaltname),
       ';',
     ),
@@ -88,24 +88,8 @@ module.exports = grammar({
       $._static_PCDATA,
       ';}',
     ),
-
-    _fontDefinition: $ => seq( 
-      field('fontname', $.fontname),
-      optional(seq(
-        '-', 
-        optional('Regular'),
-        optional($.fontWeight),
-        optional($.fontStyle)
-      ))
-    ),
     
-    fontWeight: () => choice(
-      'Bold',
-    ),
-    fontStyle: () => choice(
-      'Italic',
-    ),
-    fontname: $ => /[\w\s]+/,
+    fontname: () => /[\w\s\-]+/,
     fonttypeface: $ => $._static_PCDATA,
 
     _fontaltname: $ => seq(

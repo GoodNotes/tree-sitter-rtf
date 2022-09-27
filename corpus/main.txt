@@ -11,8 +11,7 @@ Empty RTF document
     (fontinfo
       (fontFamily)
       (charset)
-      (fontname)
-      (fontWeight)))
+      (fontname)))
   (colortbl
     (colorvalue
       (staticNumberLiteral)
@@ -37,8 +36,7 @@ Minimal RTF document
     (fontinfo
       (fontFamily)
       (charset)
-      (fontname)
-      (fontWeight)))
+      (fontname)))
   (colortbl
     (colorvalue
       (staticNumberLiteral)
@@ -138,8 +136,7 @@ Minimal RTF document
     (fontinfo
       (fontFamily)
       (charset)
-      (fontname)
-      (fontWeight)))
+      (fontname)))
   (colortbl
     (colorvalue
       (staticNumberLiteral)
@@ -170,8 +167,7 @@ Minimal RTF document
     (fontinfo
       (fontFamily)
       (charset)
-      (fontname)
-      (fontWeight)))
+      (fontname)))
   (colortbl
     (colorvalue
       (staticNumberLiteral)
