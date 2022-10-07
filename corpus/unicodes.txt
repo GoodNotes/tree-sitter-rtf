@@ -9,7 +9,7 @@ Text with a single emoji 👾
 
 \f0\fs206 \cf2 \uc0\u55357 \u56446 }
 ----------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -30,7 +30,8 @@ Text with a single emoji 👾
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (unicode)
+        (unicode))
+      (textUnit
         (unicode)))
 
 
@@ -66,7 +67,8 @@ Text with a single emoji ♧
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (unicode)
+        (unicode))
+      (textUnit
         (unicode)))
 
 
@@ -81,7 +83,7 @@ Text with a single emoji ♧ ⛑
 
 \f0\fs206 \cf2 \uc0\u9827 \u65039  \u9937 }
 ----------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -102,10 +104,14 @@ Text with a single emoji ♧ ⛑
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (unicode)
-        (unicode)
-        (textUnitContent)
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (textUnitContent))
+      (textUnit
         (unicode)))
+
 
 =============================
 Text with a single emoji ♧ ⛑ 1♧
@@ -118,7 +124,7 @@ Text with a single emoji ♧ ⛑ 1♧
 
 \f0\fs206 \cf2 \uc0\u9827 \u65039  \u9937  1\u9827 \u65039 }
 ----------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -139,12 +145,18 @@ Text with a single emoji ♧ ⛑ 1♧
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (unicode)
-        (unicode)
-        (textUnitContent)
-        (unicode)
-        (textUnitContent)
-        (unicode)
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (unicode))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (unicode))
+      (textUnit
         (unicode)))
 
 
@@ -159,7 +171,7 @@ Text with a single emoji 🕹
 
 \f0\fs200 \cf2 \uc0\u55357 \u56697 }
 ----------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -180,7 +192,8 @@ Text with a single emoji 🕹
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (unicode)
+        (unicode))
+      (textUnit
         (unicode)))
 
 
@@ -196,7 +209,7 @@ Hello 👋
 \f0\fs48 \cf2 Hello 
 \f1 \uc0\u55357 \u56395 }
 ----------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -224,8 +237,10 @@ Hello 👋
         (textUnitContent))
       (textUnit
         (fontIndex)
-        (unicode)
+        (unicode))
+      (textUnit
         (unicode)))
+
 
 =============================
 Hello 👋 Goodbye 👋👋
@@ -242,7 +257,7 @@ Hello 👋 Goodbye 👋👋
 \f2 Goodbye 
 \f1 \uc0\u55357 \u56395 \u55357 1\u56395 }
 ----------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -274,17 +289,22 @@ Hello 👋 Goodbye 👋👋
         (textUnitContent))
       (textUnit
         (fontIndex)
-        (unicode)
+        (unicode))
+      (textUnit
         (unicode))
       (textUnit
         (fontIndex)
         (textUnitContent))
       (textUnit
         (fontIndex)
-        (unicode)
-        (unicode)
-        (unicode)
-        (textUnitContent)
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (textUnitContent))
+      (textUnit
         (unicode)))
 
 
@@ -310,7 +330,7 @@ Several emojis in different lines
 \uc0\u55356 \u56818 \u55356 \u56830 \
 \uc0\u55357 \u56424 \u8205 \u10084 \u65039 \u8205 \u55357 \u56424 }
 ----------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -335,46 +355,86 @@ Several emojis in different lines
       (textUnit
         (fontIndex)
         (colorFontIndex)
-        (unicode)
-        (unicode)
-        (textUnitContent)
-        (unicode)
-        (unicode)
-        (textUnitContent)
-        (unicode)
-        (unicode)
-        (textUnitContent)
-        (unicode)
-        (unicode)
-        (unicode)
-        (unicode)
-        (unicode)
-        (unicode)
-        (unicode)
-        (textUnitContent)
-        (unicode)
-        (unicode)
-        (textUnitContent)
-        (unicode)
-        (unicode)
-        (textUnitContent)
-        (unicode)
-        (unicode)
-        (unicode)
-        (unicode)
-        (textUnitContent)
-        (unicode)
-        (unicode)
-        (unicode)
-        (unicode)
-        (textUnitContent)
-        (unicode)
-        (unicode)
-        (unicode)
-        (unicode)
-        (unicode)
-        (unicode)
-        (unicode)
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
+        (unicode))
+      (textUnit
         (unicode)))
 
 
@@ -392,7 +452,7 @@ Document with special chars ç
 \f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
 \outl0\strokewidth0 \strokec2 \'e7}
 ----------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -433,7 +493,7 @@ Document with special chars 中国人
 \f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
 \outl0\strokewidth0 \strokec2 \'d6\'d0\'b9\'fa\'c8\'cb}
 ----------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -457,11 +517,16 @@ Document with special chars 中国人
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
         (specialChar)))
 
 
@@ -479,7 +544,7 @@ Document with special chars 你Ç
 
 \f0\fs24 \cf2 \cb3 \'c4\'e3\uc0\u199 }
 ----------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -503,8 +568,10 @@ Document with special chars 你Ç
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (specialChar)
-        (specialChar)
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
         (unicode)))
 
 
@@ -520,7 +587,7 @@ Document with special chars 在家里面有\n不想去去医院
 \f0\fs48 \cf2 \'d4\'da\'bc\'d2\'c0\'ef\'c3\'e6\'d3\'d0\
 \'b2\'bb\'cf\'eb\'c8\'a5\'c8\'a5\'d2\'bd\'d4\'ba}
 ----------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -541,28 +608,50 @@ Document with special chars 在家里面有\n不想去去医院
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (textUnitContent)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
         (specialChar)))
 
 
@@ -580,7 +669,7 @@ Document with こんにちは
 \f0\fs48 \cf2 \cb3 \expnd0\expndtw0\kerning0
 \outl0\strokewidth0 \strokec2 \'82\'b1\'82\'f1\'82\'c9\'82\'bf\'82\'cd}
 ----------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -604,15 +693,24 @@ Document with こんにちは
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (specialChar)
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
         (specialChar)))
 
 ==============================================
@@ -628,7 +726,7 @@ Document with special chars and numbers 你1337
 
 \f0\fs24 \cf2 \cb3 \'c4\'e31337}
 ---------------------------------------------
-(document
+    (document
       (fonttbl
         (fontinfo
           (fontFamily)
@@ -652,6 +750,8 @@ Document with special chars and numbers 你1337
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (specialChar)
-        (specialChar)
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
         (textUnitContent)))

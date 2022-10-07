@@ -127,22 +127,26 @@ Justified aligned text unit
       (fontIndex)
       (fontSize)
       (colorFontIndex)
-      (textUnitContent)
+      (textUnitContent))
+    (textUnit
       (textUnitContent))
     (parTbl
       (alignmentConfig))
     (textUnit
       (colorFontIndex)
-      (textUnitContent)
+      (textUnitContent))
+    (textUnit
       (textUnitContent))
     (parTbl)
     (textUnit
       (colorFontIndex)
-      (textUnitContent)
+      (textUnitContent))
+    (textUnit
       (textUnitContent))
     (parTbl
       (alignmentConfig))
     (textUnit
       (colorFontIndex)
-      (textUnitContent)
+      (textUnitContent))
+    (textUnit
       (textUnitContent)))
