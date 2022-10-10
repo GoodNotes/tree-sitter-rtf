@@ -17,7 +17,11 @@ jobs:
       run: |
         yarn install
 
-    - name: Generate sintax
+    - name: Lint the grammar
+      run: |
+        yarn lint
+
+    - name: Generate syntax
       run: |
         yarn generate
 

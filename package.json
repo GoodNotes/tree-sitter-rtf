@@ -6,10 +6,15 @@
   "scripts": {
     "generate": "tree-sitter generate --no-bindings",
     "test": "tree-sitter test",
+    "lint": "eslint grammar.js && prettier --check grammar.js",
+    "format": "prettier --write grammar.js",
     "test:debug": "tree-sitter test --debug",
     "postinstall": "yarn generate"
   },
   "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-plugin-tree-sitter": "^0.0.1",
+    "prettier": "^2.7.1",
     "tree-sitter-cli": "^0.20.6"
   }
 }
