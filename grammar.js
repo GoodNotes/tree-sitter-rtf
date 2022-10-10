@@ -398,7 +398,7 @@ module.exports = grammar({
     
     charset: () => /\d+/,
     unicode: () => /\d+/,
-    specialChar: () => /[0-9a-fA-F]+/,
+    specialChar: () => /[0-9a-fA-F]{1,2}/,
     fontIndex: $ => $._static_int_number_literal,
     fontSize: $ => $._static_int_number_literal,
     colorFontIndex: $ => $._static_int_number_literal,
@@ -423,6 +423,6 @@ module.exports = grammar({
     _static_PCDATA: $ => /[^\\\\}\\{;]+/,
 
   },
-});
+}); 
 
- 
+
