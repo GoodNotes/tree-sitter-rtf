@@ -10,6 +10,8 @@ This project uses ``yarn`` and declares some scripts you can use for development
 * ``yarn generate``: Will update and generate again our parser implementation based on the grammar definition.
 * ``yarn test``: Will run all the tests you can find inside ``corpus`` folder.
 * ``yarn test:debug``: Will run all the tests with debug mode enabled
+* ``yarn lint``: Will run ESLint and Prettier checks over the grammar file
+* ``yarn format``: Will format the grammar file using Prettier
 
 ## Parsers generation
 
