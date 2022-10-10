@@ -348,6 +348,7 @@ module.exports = grammar({
         $.underlineDisabled,
         $._underlineColorIndex,
         $.strikeEnabled,
+        $.strikeDisabled,
         $._strikeColorIndex,
         seq("\\dn", field("positionDown", $.positionDown)),
         seq("\\up", field("positionUp", $.positionUp)),
@@ -395,6 +396,7 @@ module.exports = grammar({
     underlineDisabled: () => /\\ul0|\\ulnone/,
     _underlineColorIndex: () => /\\ulc\d+/,
     strikeEnabled: () => "\\strike",
+    strikeDisabled: () => "\\striked0",
     _strikeColorIndex: () => /\\strikec\d+/,
 
     positionDown: ($) => $._static_int_number_literal,
