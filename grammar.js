@@ -91,7 +91,7 @@ module.exports = grammar({
 
     _nontaggedname: ($) => seq("{\\*", "\\fname", $._static_PCDATA, ";}"),
 
-    fontname: () => /[\w\s\-]+/, // eslint-disable-line
+    fontname: () => /[\w\s\-]+/,
     fonttypeface: ($) => $._static_PCDATA,
 
     _fontaltname: ($) => seq("{\\*", "\\falt", $._static_PCDATA, "}"),
@@ -366,7 +366,7 @@ module.exports = grammar({
 
     _commonTextUnitContent: () =>
       choice(
-        /[\w| |!|\.|:|\-|\t|\?|\*|^|@|,|/|\(|\)|<|>|;]+/, // eslint-disable-line
+        /[\w !\"`$&'\+=\~%\[\]\.:\-\t\?\*^@#,/\(\)<>;|`]+/,
         "\\\n",
         new RegExp("\\\\[" + ESCAPE_SET + "]"),
         // Chars that sholud be escaped but are not in RTF
