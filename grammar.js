@@ -339,6 +339,7 @@ module.exports = grammar({
       choice(
         seq("\\f", field("fontIndex", $.fontIndex)),
         seq("\\fs", field("fontSize", $.fontSize)),
+        seq("\\fsmilli", field("fontSizeMillimeters", $.fontSizeMillimeters)),
         seq("\\cf", field("colorFontIndex", $.colorFontIndex)),
         $.boldEnabled,
         $.boldDisabled,
@@ -387,6 +388,7 @@ module.exports = grammar({
     specialChar: () => /[0-9a-fA-F]{1,2}/,
     fontIndex: ($) => $._static_int_number_literal,
     fontSize: ($) => $._static_int_number_literal,
+    fontSizeMillimeters: ($) => $._static_int_number_literal,
     colorFontIndex: ($) => $._static_int_number_literal,
     boldEnabled: () => "\\b",
     boldDisabled: () => /\\b0/,
