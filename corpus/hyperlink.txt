@@ -24,11 +24,13 @@ Adios}
           (staticNumberLiteral)
           (staticNumberLiteral)))
       (parTbl)
+      (hyperlink)
       (textUnit
         (fontIndex)
         (fontSize)
         (colorFontIndex)
         (textUnitContent))
+      (endHyperlink)
       (textUnit
         (fontIndex)
         (fontSize)
@@ -72,11 +74,13 @@ Text with hpyerlink - https://www.google.com/
         (textUnitContent))
       (textUnit
         (textUnitContent))
+      (hyperlink)
       (textUnit
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (textUnitContent)))
+        (textUnitContent))
+      (endHyperlink))
 
 
 =============================
@@ -115,8 +119,10 @@ Text with hpyerlink - No extra style
         (textUnitContent))
       (textUnit
         (textUnitContent))
+      (hyperlink)
       (textUnit
-        (textUnitContent)))
+        (textUnitContent))
+      (endHyperlink))
 
 
 =============================
@@ -155,9 +161,11 @@ test.\
         (fontSize)
         (colorFontIndex)
         (textUnitContent))
+      (hyperlink)
       (textUnit
         (fontSize)
         (textUnitContent))
+      (endHyperlink)
       (textUnit
         (textUnitContent))
       (textUnit
@@ -201,7 +209,9 @@ Text with hpyerlink - No extra style and HTTP://GOGOLE.COM
         (textUnitContent))
       (textUnit
         (textUnitContent))
+      (hyperlink)
       (textUnit
         (textUnitContent))
+      (endHyperlink)
       (textUnit
         (textUnitContent)))

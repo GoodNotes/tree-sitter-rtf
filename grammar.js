@@ -295,9 +295,11 @@ module.exports = grammar({
 
     _fieldinst: ($) => seq("{\\*", "\\fldinst", $._hyperlinkUnit, "}"),
 
-    _fieldslt: ($) => seq("{\\fldrslt", " ", $.textUnit, "}"),
+    _fieldslt: ($) => seq("{\\fldrslt", " ", $.textUnit, $.endHyperlink),
 
-    _hyperlinkUnit: ($) => seq('{HYPERLINK "', $._static_URL_literal, '"}'),
+    endHyperlink: () => "}",
+
+    _hyperlinkUnit: ($) => seq('{HYPERLINK "', $.hyperlink, '"}'),
 
     _textUnitParameters: ($) =>
       seq(repeat1(seq(repeat1($._textUnit_config), " "))),
@@ -311,6 +313,8 @@ module.exports = grammar({
     _textUnitInformation: ($) =>
       seq($._textUnitVisibleInformation, optional("\n")),
 
+    hyperlink: ($) => $._static_URL_literal,
+    
     textUnit: ($) =>
       seq(optional($._textUnitParameters), $._textUnitInformation),
 
