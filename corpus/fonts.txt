@@ -63,11 +63,13 @@
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (textUnitContent)
+        (textUnitContent))
+      (textUnit
         (textUnitContent))
       (textUnit
         (fontSize)
-        (textUnitContent)
+        (textUnitContent))
+      (textUnit
         (textUnitContent))
       (textUnit
         (fontSize)
@@ -106,16 +108,20 @@ Pepe}
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (textUnitContent)
+        (textUnitContent))
+      (textUnit
         (textUnitContent))
       (textUnit
         (fontSize)
-        (textUnitContent)
+        (textUnitContent))
+      (textUnit
         (textUnitContent))
       (textUnit
         (fontSize)
-        (textUnitContent)
-        (textUnitContent)
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
         (textUnitContent)))
 
 =============================
@@ -171,7 +177,8 @@ Name, surname with different style font and bold no bold content
       (textUnit
         (fontIndex)
         (boldDisabled)
-        (textUnitContent)
+        (textUnitContent))
+      (textUnit
         (textUnitContent))
       (textUnit
         (fontIndex)
@@ -292,7 +299,8 @@ Name, surname with several style fonts mixed
       (textUnit
         (fontIndex)
         (boldDisabled)
-        (textUnitContent)
+        (textUnitContent))
+      (textUnit
         (textUnitContent))
       (textUnit
         (fontIndex)

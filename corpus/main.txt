@@ -289,7 +289,7 @@ _:::\'c7\'a8\'c7*^\'bf?@different chars\
 }
 ----------------------------
     (document
-       (fonttbl
+      (fonttbl
         (fontinfo
           (fontFamily)
           (charset)
@@ -325,39 +325,60 @@ _:::\'c7\'a8\'c7*^\'bf?@different chars\
         (fontIndex)
         (fontSize)
         (colorFontIndex)
-        (textUnitContent)
-        (textUnitContent)
-        (textUnitContent)
-        (textUnitContent)
-        (textUnitContent)
-        (textUnitContent)
-        (textUnitContent)
-        (textUnitContent)
-        (textUnitContent)
-        (textUnitContent)
-        (specialChar)
-        (specialChar)
-        (specialChar)
-        (textUnitContent)
-        (specialChar)
-        (textUnitContent)
-        (textUnitContent)
-        (textUnitContent)
-        (textUnitContent)
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (specialChar))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
         (textUnitContent))
       (parTbl
         (lineSpacing)
         (alignmentConfig))
       (textUnit
         (colorFontIndex)
-        (textUnitContent)
+        (textUnitContent))
+      (textUnit
         (textUnitContent))
       (parTbl
         (lineSpacing)
         (alignmentConfig))
       (textUnit
         (colorFontIndex)
-        (textUnitContent)
+        (textUnitContent))
+      (textUnit
         (textUnitContent))
       (parTbl
         (lineSpacing)
@@ -366,9 +387,12 @@ _:::\'c7\'a8\'c7*^\'bf?@different chars\
       (textUnit
         (colorFontIndex)
         (positionDown)
-        (textUnitContent)
-        (textUnitContent)
-        (textUnitContent)
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
+        (textUnitContent))
+      (textUnit
         (textUnitContent))
       (parTbl
         (lineSpacing)
@@ -376,7 +400,8 @@ _:::\'c7\'a8\'c7*^\'bf?@different chars\
       (textUnit
         (colorFontIndex)
         (positionUp)
-        (textUnitContent)
+        (textUnitContent))
+      (textUnit
         (textUnitContent))
       (textUnit
         (colorFontIndex)
@@ -392,8 +417,40 @@ _:::\'c7\'a8\'c7*^\'bf?@different chars\
         (textUnitContent))
       (textUnit
         (fontIndex)
-        (unicode)
+        (unicode))
+      (textUnit
         (unicode))
       (textUnit
         (fontIndex)
         (textUnitContent)))
+
+
+=============================
+RTF with URL as text
+=============================
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 https://www.google.com}
+----------------------------
+(document
+      (fonttbl
+        (fontinfo
+          (fontFamily)
+          (charset)
+          (fontname)))
+      (colortbl
+        (colorvalue
+          (staticNumberLiteral)
+          (staticNumberLiteral)
+          (staticNumberLiteral)))
+      (parTbl)
+      (textUnit
+        (fontIndex)
+        (fontSize)
+        (colorFontIndex)
+         (textUnitContent)))

@@ -288,8 +288,31 @@ module.exports = grammar({
         optional($._paperTbl),
         optional($._formatingProperties),
         optional($.parTbl),
-        $.textUnit
+        choice($._fieldArea, $.textUnit)
       ),
+
+    _fieldArea: ($) => seq("{\\field", $._fieldinst, $._fieldslt, "}"),
+
+    _fieldinst: ($) => seq("{\\*", "\\fldinst", $._hyperlinkUnit, "}"),
+
+    _fieldslt: ($) => seq("{\\fldrslt", " ", $.textUnit, "}"),
+
+    _hyperlinkUnit: ($) => seq('{HYPERLINK "', $._static_URL_literal, '"}'),
+
+    _textUnitParameters: ($) =>
+      seq(repeat1(seq(repeat1($._textUnit_config), " "))),
+
+    _textUnitVisibleInformation: ($) =>
+      prec(
+        2,
+        repeat1(choice($._textUnitEmoji, $._textSpecialChar, $.textUnitContent))
+      ),
+
+    _textUnitInformation: ($) =>
+      seq($._textUnitVisibleInformation, optional("\n")),
+
+    textUnit: ($) =>
+      seq(optional($._textUnitParameters), $._textUnitInformation),
 
     parTbl: ($) => seq(repeat1($._par_config)),
 
@@ -326,15 +349,6 @@ module.exports = grammar({
 
     alignmentConfig: () => choice(/\\ql/, /\\qc/, /\\qr/, /\\qj/),
 
-    textUnit: ($) =>
-      seq(
-        repeat1(seq(repeat1($._textUnit_config), " ")),
-        repeat1(
-          choice($._textUnitEmoji, $._textSpecialChar, $.textUnitContent)
-        ),
-        optional("\n")
-      ),
-
     _textUnit_config: ($) =>
       choice(
         seq("\\f", field("fontIndex", $.fontIndex)),
@@ -363,7 +377,7 @@ module.exports = grammar({
         /\\strokec\d+/
       ),
 
-    textUnitContent: ($) => prec(2, repeat1($._commonTextUnitContent)),
+    textUnitContent: ($) => $._commonTextUnitContent,
 
     _commonTextUnitContent: () =>
       choice(
@@ -410,5 +424,7 @@ module.exports = grammar({
     // Hidden static literal
     _static_int_number_literal: () => /-?\d+/,
     _static_PCDATA: () => /[^\\\\}\\{;]+/,
+    _static_URL_literal: () =>
+      /([a-zA-Z]+:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#\[\]@!\$&'\(\)\*\+,;=.]+/,
   },
 });
