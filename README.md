@@ -25,6 +25,8 @@ You can generate a Tree-Sitter parser at any time by doing:
 yarn generate
 ```
 
+
+
 Tree-Sitter grammar is defined as a JavaScript file with access to some build-it functions. If you want to know more on how it works, you can take a look at:
 
  - [Tree-Sitter documentation on creating parsers](https://tree-sitter.github.io/tree-sitter/creating-parsers)
