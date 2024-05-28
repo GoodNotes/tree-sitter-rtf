@@ -35,3 +35,4 @@ log.html
 
 # Swift build folder
 .build
+.yarn/install-state.gz
