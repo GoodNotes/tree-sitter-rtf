@@ -4,6 +4,7 @@
   "repository": "https://github.com/GoodNotes/GoodNotes-5",
   "private": true,
   "scripts": {
+    "clean": "rm -rf src/grammar.json src/node-types.json src/parser.c src/tree_sitter log.html .swift build public coverage",
     "generate": "tree-sitter generate --no-bindings",
     "test": "tree-sitter test",
     "lint": "eslint grammar.js && prettier --check grammar.js",
