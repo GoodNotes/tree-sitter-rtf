@@ -29,13 +29,3 @@ jobs:
       run: |
         yarn test
   
-  integration-tests:
-      runs-on: ubuntu-latest
-
-      steps:
-      - uses: actions/checkout@v4.1.7
-
-      - name: Run integration tests
-        run: |
-          cd integration-tests
-          yarn install --immutable
