@@ -9,7 +9,7 @@
     "lint": "eslint grammar.js && prettier --check grammar.js",
     "format": "prettier --write grammar.js",
     "test:debug": "tree-sitter test --debug",
-    "postinstall": "yarn generate"
+    "postinstall": "yarn --immutable && yarn generate"
   },
   "devDependencies": {
     "eslint": "^8.25.0",
