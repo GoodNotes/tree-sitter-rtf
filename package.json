@@ -5,12 +5,12 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf src/grammar.json src/node-types.json src/parser.c src/tree_sitter log.html .swift build public coverage",
-    "generate": "tree-sitter generate --no-bindings",
+    "generate": "./scripts/generate.sh",
     "test": "tree-sitter test",
     "lint": "eslint grammar.js && prettier --check grammar.js",
     "format": "prettier --write grammar.js",
     "test:debug": "tree-sitter test --debug",
-    "postinstall": "yarn generate"
+    "postinstall": "./scripts/generate.sh"
   },
   "devDependencies": {
     "eslint": "^8.25.0",

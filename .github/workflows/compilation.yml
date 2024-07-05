@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3.1.0
+    - uses: actions/checkout@v4.1.7
 
     - name: Install dependencies
       run: |
-        yarn install
+        yarn install --immutable
 
     - name: Lint the grammar
       run: |
@@ -28,3 +28,4 @@ jobs:
     - name: Test corpus
       run: |
         yarn test
+  
