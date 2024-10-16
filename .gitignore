@@ -35,3 +35,7 @@ log.html
 
 # Swift build folder
 .build
+
+# iOS
+*.xcuserdatad
+xcuserdata
